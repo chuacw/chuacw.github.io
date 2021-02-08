@@ -1,0 +1,80 @@
+/*  'Air' alternate stylesheet for Poison Ivy skin for CS 1.1 */
+
+body{
+	background-color: #E3EBEF;
+}
+#header {
+	background-color: #FFF;
+}  
+#nav {
+	background-color: #9BA0A3;
+	background-image: url(../Images/airbottom.gif);
+    } 
+#contentwrapper {
+	background-color: #FFF;
+	background-image: url(../Images/airtop.gif);
+}
+#title {
+	background-image: url(../Images/airtop.gif);
+}
+a:visited,
+a:active,
+a:link {	
+	color: #78798A;
+}
+a:hover {
+	color:#A39F9B;
+}
+#contentfooter{
+	background-image: url(../Images/airfooter.gif);
+}
+#sidebar-a {
+	border-left-color: #E3EBEF;
+		}
+.calNextPrev a:link, .calNextPrev a:active, .calNextPrev a:visited {
+	color: #78798A!important;
+}
+.calNextPrev a:hover {
+	color: #A39F9B!important;
+}
+#masthead {
+	color: #333;
+	border-bottom: 2px solid #9BA0A3;
+	background: #FFF;
+}
+#masthead a:link, #masthead a:visited, #masthead a:active, #masthead a:hover {
+	color: #78798A;
+}
+
+/* Tag Styles */
+
+.Tag1 a:link, .Tag1 a:visited, .Tag1 a:active
+{
+	color: #28293A;
+}
+
+.Tag2 a:link, .Tag2 a:visited, .Tag2 a:active
+{
+	color: #38394A;
+}
+
+.Tag3 a:link, .Tag3 a:visited, .Tag3 a:active
+{
+	color: #48495A;
+}
+
+.Tag4 a:link, .Tag4 a:visited, .Tag4 a:active
+{
+	color: #58596A;
+}
+
+.Tag5 a:link, .Tag5 a:visited, .Tag5 a:active
+{
+	color: #68697A;
+}
+
+.Tag6 a:link, .Tag6 a:visited, .Tag6 a:active
+{
+	color: #78798A;
+}
+

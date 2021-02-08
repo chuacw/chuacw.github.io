@@ -1,0 +1,76 @@
+/* Light Luxinterior Blog Skin for CS 2.1 
+   Version 0.60 - 11/07/2006
+*/
+html, body {
+	color: #555;
+	background-color: #FFF;
+}
+
+a:link, a:visited, a:hover, a:active{
+	color: #176DB5;
+}
+dl.entrylist dt{
+	background-color: #EEE;
+}
+dl.entrylist dd{
+	background: url(../images/lightgradient.jpg) repeat-x top left;
+}
+.entrylistfooter{
+	font-size: 0.9em;
+	margin-top: 1em;
+}
+/* EntryView Styles - The Entry List shows the blog post on the post page*/
+.entryview{
+	background: url(../images/lightgradient.jpg) repeat-x top left;
+}
+
+dl.comments dt{
+	background-color:#F4F4F4;
+}
+dl.comments dd{
+
+	background-color:#F4F4F4;
+
+}
+dl.comments dt.owner 
+{
+	background-color: #d2d2d2;
+}
+dl.comments dd.owner
+{
+	background-color: #d2d2d2;
+}
+.commentsfooter{
+}
+/* This is the message that displays when someone has posted a new comment */
+#commentmessage{
+	background: #DDD url(../images/lightyes.gif) no-repeat 5px center;
+	color: #333;
+}
+.tagcloud a:hover{
+	background-color: #EEE;
+}
+
+/* End Tag Styles */
+ul.rss li{
+
+        background: url(../images/lightrss.gif) no-repeat left center;
+}
+.textline{
+	background-color: #F4F4F4;
+}
+.textmultiline{
+	background-color: #F4F4F4;
+}
+.searchbox{
+	background-color: #F4F4F4;
+}
+#wrapper{  
+   float:right;
+   margin:0 2% 0 0;
+	}
+
+#subcontent-a{
+   float:left;
+   margin:0 0 0 2%;
+	}

@@ -1,0 +1,51 @@
+	body{
+	background-image: url(http://cs.soup.co.za/content/media/images/LuxinteriorCustom/damask_background.gif);
+}
+
+#title{
+	background-image: url(http://cs.soup.co.za/content/media/images/LuxinteriorCustom/header_background.jpg);
+	background-repeat: no-repeat;
+	background-position: left top;
+	height: 123px;
+}
+#title h1 {visibility: hidden;}
+#title p {visibility: hidden;}
+#nav {
+	background-image: url(http://cs.soup.co.za/content/media/images/LuxinteriorCustom/header_nav.jpg);
+	background-repeat: no-repeat;
+	background-position: left top;
+	height: 57px;
+}
+#nav{
+	border-bottom-width: 0px;
+	border-bottom-style: none;
+	padding-bottom: 0px;
+}
+#wrapper {
+	padding: 1em;
+	background-image: url(http://cs.soup.co.za/content/media/images/LuxinteriorCustom/damaskgradient.gif);
+	background-repeat: repeat-x;
+	background-position: left top;
+}
+#container {
+	background-color: #362F2D;
+}
+#sidebar-a {
+	background-image: url(../../../../content/media/images/LuxinteriorCustom/sidebar.jpg);
+	background-repeat: no-repeat;
+	background-position: left top;
+		border-left-width: 0px;
+	border-left-style: none;
+}
+
+.CalendarOtherMonth{
+	color: #222;
+}
+.post
+{
+	border-bottom-width: 0px;
+	border-bottom-style: none;
+	border-top-width: 0px;
+	border-top-style: none;
+
+}

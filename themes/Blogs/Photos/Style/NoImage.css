@@ -1,0 +1,23 @@
+
+h1 a:visited,
+h1 a:active,
+h1 a:link {
+	padding-left : 10px;
+}
+
+#top 
+{
+	height: 60px;
+	padding : 0px;
+	padding-top: 5px;
+	padding-bottom: 0px;
+	background-repeat: no-repeat;
+	background-image: none;
+}
+
+#tagline {
+	font-size : 0.8em;
+	margin : 0px;
+	padding-left : 13px;
+}
+

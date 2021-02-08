@@ -1,0 +1,116 @@
+<%@ Master Language="C#" AutoEventWireup="true" MasterPageFile="../Common/master.Master" %>
+
+<script language="C#" runat="server">
+
+CommunityServer.Components.Group group = null;
+CommunityServer.MediaGalleries.Components.MediaGallery gallery = null;
+
+void Page_Load()
+{
+    group = MediaGalleryControlUtility.Instance().GetCurrentGroup(this);
+    gallery = MediaGalleryControlUtility.Instance().GetCurrentMediaGallery(this);
+}
+    
+protected bool IsGroupSelected(int groupID)
+{
+    if (group == null || gallery != null)
+        return false;
+    else
+        return group.GroupID == groupID;
+}
+
+protected bool IsGroupExpanded(int groupID)
+{
+    if (group == null)
+        return false;
+    else
+        return group.GroupID == groupID;
+}
+
+protected bool IsMediaGallerySelected(int sectionID)
+{
+    if (gallery == null)
+        return false;
+    else
+        return gallery.SectionID == sectionID;
+}
+
+</script>
+
+<asp:Content ContentPlaceHolderID="HeaderRegion" runat="server" >
+    <CSControl:SelectedNavigation Selected="media" runat="Server" />
+</asp:Content>
+
+<asp:Content ContentPlaceHolderID="bbcr" runat="server">
+    <asp:ContentPlaceHolder ID="bbcr" runat="server" />
+</asp:Content>
+
+<asp:Content ContentPlaceHolderID="tr" runat="server">
+    <asp:ContentPlaceHolder ID="tr" runat="server" />
+</asp:Content>
+
+<asp:Content ContentPlaceHolderID="lcr" runat="server">
+    <asp:ContentPlaceHolder ID="lcr" runat="server">
+
+        <div class="CommonSidebar">    
+
+            <CSMedia:GroupList runat="server" ShowHeaderFooterOnNone="false">
+                <QueryOverrides GroupID="-1" PageSize="999" />
+                <HeaderTemplate>
+                        <div class="CommonContentBox Highlighted2">
+                        <h4 class="CommonContentBoxHeader"><CSControl:ResourceControl runat="server" ResourceName="MediaGallery_BrowseMedia" /></h4>
+                        <ul class="CommonContentBoxList">
+                </HeaderTemplate>
+                <ItemTemplate>
+                    <li class="<%# IsGroupSelected((int) Eval("GroupID")) ? "Selected" : "" %>">
+                        <CSMedia:GroupData Property="Name" LinkTo="GroupHome" runat="server" />
+                        <CSMedia:MediaGalleryList runat="server">
+                            <DisplayConditions><CSControl:CustomCondition runat="server" CustomResult='<%# IsGroupExpanded((int) Eval("GroupID")) %>' /></DisplayConditions>
+                            <QueryOverrides PageSize="999" SectionID="-1" />
+                            <HeaderTemplate>
+                            </HeaderTemplate>
+                            <ItemTemplate>
+                                <li class="Child <%# IsMediaGallerySelected((int) Eval("SectionID")) ? "Selected" : "" %>">
+                                    <CSMedia:MediaGalleryData runat="server" Property="Name" LinkTo="MediaGalleryHome" />
+                                </li>
+                            </ItemTemplate>
+                            <FooterTemplate>
+                            </FooterTemplate>
+                        </CSMedia:MediaGalleryList>                            
+                    </li>
+                </ItemTemplate>
+                <NoneTemplate></NoneTemplate>
+                <FooterTemplate>
+                    </ul>
+                    </div>
+                </FooterTemplate>
+            </CSMedia:GroupList>
+            
+            <CSControl:ContentFragmentList runat="server" Property="MediaWidgets">
+	            <ItemTemplate>
+	                <CSControl:ContentFragment runat="server">
+	                    <LeaderTemplate>
+	                        <div class="CommonContentBox">
+                                <CSControl:ContentFragmentData Property="FragmentHeader" runat="server" Tag="H4" CssClass="CommonContentBoxHeader" />
+	                            <div class="CommonContentBoxContent">
+	                    </LeaderTemplate>
+	                    <TrailerTemplate>
+				                </div>
+				                <CSControl:ContentFragmentData ResourceName="ViewMore" LinkTo="More" runat="server" Tag="Div" CssClass="CommonContentBoxFooter" />
+			                </div>
+	                    </TrailerTemplate>
+	                </CSControl:ContentFragment>
+	            </ItemTemplate>
+	        </CSControl:ContentFragmentList>
+            
+        </div>
+
+    </asp:ContentPlaceHolder>
+</asp:Content>
+
+<asp:Content ContentPlaceHolderID="bcr" runat="server">
+    <asp:ContentPlaceHolder ID="bcr" runat="server">
+    </asp:ContentPlaceHolder>
+</asp:Content>
+
+<asp:Content ContentPlaceHolderID="rcr" runat="server" />

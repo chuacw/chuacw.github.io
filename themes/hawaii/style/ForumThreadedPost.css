@@ -1,0 +1,163 @@
+/* Style overrides */
+
+html
+{
+	overflow: hidden;
+	background-color: #ccc;
+}
+
+html, body
+{
+	margin: 0;
+	padding: 0;
+	overflow: hidden;
+	background-color: #ccc;
+}
+
+#Common
+{
+	border-width: 0;
+	background-color: #fff;
+	margin: 0;
+	width: auto;
+}
+
+#CommonBodyColumn
+{
+	background-color: #ccc;
+}
+
+#CommonLeftColumn
+{
+	display: none;
+}
+
+#CommonRightColumn
+{
+	display: none;
+}
+
+#CommonHeader
+{
+	display: none;
+}
+
+#CommonFooter
+{
+	display: none;
+}
+
+/* Styles */
+
+.ForumThreadPostButtons
+{
+	padding: 4px;
+	margin: 0px;
+	white-space: nowrap;
+	background-color: #ccc;
+}
+
+.ForumThreadPostContainer
+{
+	padding: 8px;
+	vertical-align: top;
+	overflow:hidden;
+	background-color: #ccc;
+	text-align: left;	
+}
+
+.ForumThreadPostBody
+{
+	background-color: #fff;
+	padding: 8px;
+	border: solid 1px #ccc;
+}
+
+.ForumThreadPostHeader
+{
+	padding: 0 0 4px 0;
+	border-width: 0;
+	border-bottom: solid 1px #ddd;	
+	width: 100%;
+	overflow: hidden;
+	background-color: Transparent;
+	font-weight: normal;
+}
+
+.ForumThreadPostUserAvatar
+{
+	padding-right: 6px;
+}
+
+.ForumThreadPostPubDate
+{
+	padding: 0;
+	margin: 0;
+	font-size: 80%;
+}
+
+.ForumThreadPostTitle
+{
+	font-size: 12pt;
+	font-weight: bold;
+	white-space: nowrap;
+	overflow: hidden;
+	width: 100%;
+}
+
+.ForumThreadPostAuthor
+{
+	font-weight: bold;
+	margin: 0;
+	padding: 0;
+	font-size: 115%;
+	padding-top: 6px;
+}
+
+.ForumThreadPostUserProperties
+{
+	padding-top: 8px;
+	font-size: 80%;
+	white-space: nowrap;
+}
+
+.ForumThreadPostRoleIcons
+{
+	white-space: nowrap;
+	margin-top: 4px;
+}
+
+.ForumThreadPostRoleIcons img
+{
+	margin-right: 8px;
+}
+
+.ForumThreadPostAttachment
+{
+	padding: 0 0 2px 0;
+}
+
+.ForumThreadPostContent
+{
+	padding: 8px 0 12px 0;
+	overflow: auto;
+}
+
+UL.ForumThreadPostUserPropertyList
+{
+	margin: 0;
+	padding: 0 0 0 4px;
+	list-style-type: none;	
+}
+
+UL.ForumThreadPostUserPropertyList LI
+{
+	display: inline;
+	margin: 0 10px 0 0;
+	font-size: 90%;
+}
+
+.ForumThreadPostFooterArea
+{
+	border-width: 0;
+}

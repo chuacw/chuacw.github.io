@@ -1,0 +1,81 @@
+/*  'Water' alternate stylesheet for Poison Ivy skin for CS 1.1 */
+html, body {
+	color: #030303;
+	}
+body{
+	background-color: #4F87FD;
+}
+#header {
+	background-color: #FCFCFC;
+} 
+#nav {
+	background-color: #375DB0;
+	background-image: url(../Images/waterbottom.gif);
+    }
+#contentwrapper {
+	background-color: #FCFCFC;
+	background-image: url(../Images/watertop.gif);
+}
+#title {
+	background-image: url(../Images/watertop.gif);
+}
+a:visited,
+a:active,
+a:link {	
+	color: #4271D6;
+}
+a:hover {
+	color:#E6EDFC;
+}
+#contentfooter{
+	background-image: url(../Images/waterfooter.gif);
+}
+#sidebar-a {
+	border-left-color: #999;
+		}
+.calNextPrev a:link, .calNextPrev a:active, .calNextPrev a:visited {
+	color: #4271D6!important;
+}
+.calNextPrev a:hover {
+	color: #E6EDFC!important;
+}
+#masthead {
+	color: #333;
+	border-bottom: 2px solid #375DB0;
+	background: #FCFCFC;
+}
+#masthead a:link, #masthead a:visited, #masthead a:active, #masthead a:hover {
+	color: #4271D6;
+}
+
+/* Tag Styles */
+
+.Tag1 a:link, .Tag1 a:visited, .Tag1 a:active
+{
+	color: #002186;
+}
+
+.Tag2 a:link, .Tag2 a:visited, .Tag2 a:active
+{
+	color: #023196;
+}
+
+.Tag3 a:link, .Tag3 a:visited, .Tag3 a:active
+{
+	color: #1241A6;
+}
+
+.Tag4 a:link, .Tag4 a:visited, .Tag4 a:active
+{
+	color: #2251B6;
+}
+
+.Tag5 a:link, .Tag5 a:visited, .Tag5 a:active
+{
+	color: #3261C6;
+}
+
+.Tag6 a:link, .Tag6 a:visited, .Tag6 a:active
+{
+	color: #4271D6;
+}

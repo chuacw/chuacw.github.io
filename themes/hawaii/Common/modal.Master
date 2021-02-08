@@ -1,0 +1,42 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" %>
+<%@ Import Namespace="CommunityServer.Components" %>
+<%@ Import Namespace="CommunityServer.Blogs.Components" %>
+<%@ Register TagPrefix="CSUserControl" TagName="UserWelcome" Src="UserWelcome.ascx" %>
+
+<script runat="server">
+
+    protected override void OnInit(EventArgs e)
+    {
+        CSContext.Current.IsModal = true;
+        base.OnInit(e);
+    }
+    
+</script>
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional-dtd"> 
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+    <head runat="server">
+    <meta http-equiv="X-UA-Compatible" content="IE=7" />
+    <CSControl:Head runat="Server" >
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+        <CSControl:Style runat="server" />
+        <CSControl:Style runat="server" Href="../style/Common.css" Media="screen,print" />
+        <CSControl:Style runat="server" Href="../style/DynamicStyle.aspx" />
+        <CSControl:Style runat="server" Href="../style/Modal.css" Media="screen,print" />
+        <CSControl:Style runat="server" Href="../style/common_print.css" media="print" />
+        <asp:ContentPlaceHolder runat="server" id="HeaderRegion" />
+    </CSControl:Head>
+    </head>
+	<body>
+		<form runat="server">
+			<TWC:Modal ID="Modal1" runat="server" CssClasses="CommonModal" TitleCssClasses="CommonModalTitle" CloseCssClasses="CommonModalClose" ContentCssClasses="CommonModalContent" FooterCssClasses="CommonModalFooter" ResizeCssClasses="CommonModalResize" MaskCssClasses="CommonModalMask" LoadingUrl="~/utility/loading.htm" />			
+			<asp:ContentPlaceHolder id="bscr" runat="server" />
+				<div id="CommonOuter"><div id="Common">
+					<div id="CommonBody">
+                        <asp:ContentPlaceHolder id="bcr" runat="server" />
+					</div>
+				</div></div>
+		</form>
+		<asp:ContentPlaceHolder id="outsidetheform" runat="server" />
+	</body>
+</html>

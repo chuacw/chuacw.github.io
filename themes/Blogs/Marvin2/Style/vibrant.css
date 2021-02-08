@@ -1,0 +1,102 @@
+body {
+	background-color : #ADF;
+}
+
+h1 a:visited,
+h1 a:active,
+h1 a:link {
+	color : #ADF;
+}
+
+h1 a:hover {
+	color : #BEF;
+}
+
+a:visited,
+a:active,
+a:link {
+	color : #606;
+	font-weight : bold;
+}
+
+#top {
+	background-color : #909;
+	color : #ADF;
+	font-weight : bold;
+	border-bottom : 4px solid #303;
+}
+
+p.date {
+	border-bottom : 1px solid #C66;	
+}
+
+#main {
+	background-color : #FFF;
+	border-bottom : 4px solid #303;
+}
+
+.comment
+{
+	padding: 4px;
+}
+
+.commentowner
+{
+	background-color: #f3f3f3;
+	padding: 4px;
+	border: solid 1px #ddd;
+}
+
+#comments h4 span {
+	color : #999;
+}
+
+h3 {
+	border-bottom : 1px solid #AAA;
+}
+
+table.CalendarTitle
+{
+	background-color : #909;
+	border-bottom : 1px solid #303;
+}
+
+#masthead {
+	color: #ADF;
+	background: #909;
+}
+#masthead a:link, #masthead a:visited, #masthead a:active, #masthead a:hover {
+	color: #87CEEB;
+}
+
+/* Tag Styles */
+
+.Tag1 a:link, .Tag1 a:visited, .Tag1 a:active
+{
+	color: #101;
+}
+
+.Tag2 a:link, .Tag2 a:visited, .Tag2 a:active
+{
+	color: #202;
+}
+
+.Tag3 a:link, .Tag3 a:visited, .Tag3 a:active
+{
+	color: #303;
+}
+
+.Tag4 a:link, .Tag4 a:visited, .Tag4 a:active
+{
+	color: #404;
+}
+
+.Tag5 a:link, .Tag5 a:visited, .Tag5 a:active
+{
+	color: #505;
+}
+
+.Tag6 a:link, .Tag6 a:visited, .Tag6 a:active
+{
+	color: #606;
+}

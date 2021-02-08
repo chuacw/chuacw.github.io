@@ -1,0 +1,63 @@
+<%@ Master Language="C#" AutoEventWireup="true" MasterPageFile="../Common/master.Master" %>
+
+<asp:Content ContentPlaceHolderID="HeaderRegion" runat="server" >
+    <CSControl:SelectedNavigation Selected="forums" runat="Server" />
+	<CSControl:ThemeStyle runat="server" Href="~/style/forum.css" Media="screen,print" />
+	<CSControl:ThemeStyle runat="server" Href="~/style/forum_print.css" media="print" />
+</asp:Content>
+
+<asp:Content ContentPlaceHolderID="tr" runat="server">
+    <asp:ContentPlaceHolder ID="tr" runat="server" />
+</asp:Content>
+
+<asp:Content ContentPlaceHolderID="sr" runat="server">
+    <asp:ContentPlaceHolder ID="sr" runat="server">
+        <CSControl:SearchForm runat="server" 
+            QueryTextBoxId="TitleBarSearchText" 
+            SubmitButtonId="TitleBarSearchButton"
+            DefaultSearchText="Search this site"
+            >
+            <FormTemplate>
+                <div class="CommonSearchArea">
+                    <div class="CommonSearchRoundTop"><div class="r1"></div><div class="r2"></div><div class="r3"></div><div class="r4"></div></div>
+                    <div class="CommonSearchContent"><div class="CommonSearchContentInner">
+                        <CSControl:DefaultButtonTextBox id="TitleBarSearchText" runat="server" columns="15" maxlength="64" ButtonId="TitleBarSearchButton" onkeyup="if (this.value == '') this.className = 'CommonSearchInputEmpty'; else this.className = 'CommonSearchInputNormal';" class="CommonSearchInputEmpty" /><asp:Button id="TitleBarSearchButton" runat="server" Text="&nbsp;" CssClass="CommonSearchButton" CausesValidation="false" />
+                    </div></div>
+                    <div class="CommonSearchRoundBottom"><div class="r1"></div><div class="r2"></div><div class="r3"></div><div class="r4"></div></div>
+                </div>
+            </FormTemplate>
+        </CSControl:SearchForm>
+    </asp:ContentPlaceHolder>
+</asp:Content>
+
+<asp:Content ContentPlaceHolderID="bbcr" runat="server">
+    <asp:ContentPlaceHolder ID="bbcr" runat="server" />
+</asp:Content>
+
+<asp:Content ContentPlaceHolderID="bcr" runat="server">
+    <asp:ContentPlaceHolder id="bcr" runat="server" />
+</asp:Content>
+
+<asp:Content ContentPlaceHolderID="rcr" runat="server" >
+    <asp:ContentPlaceHolder ID="rcr" runat="server">
+	<div class="CommonSidebar">
+	    
+	    <CSControl:ContentFragmentList runat="server" Property="ForumWidgets">
+	    <ItemTemplate>
+	        <CSControl:ContentFragment runat="server">
+	            <LeaderTemplate>
+	                <div class="CommonContentBox">
+                        <CSControl:ContentFragmentData Property="FragmentHeader" runat="server" Tag="H4" CssClass="CommonContentBoxHeader" />
+	                    <div class="CommonContentBoxContent">
+	            </LeaderTemplate>
+	            <TrailerTemplate>
+				        </div>
+				        <CSControl:ContentFragmentData ResourceName="ViewMore" LinkTo="More" runat="server" Tag="Div" CssClass="CommonContentBoxFooter" />
+			        </div>
+	            </TrailerTemplate>
+	        </CSControl:ContentFragment>
+	    </ItemTemplate>
+	    </CSControl:ContentFragmentList>
+    </div>
+    </asp:ContentPlaceHolder>
+</asp:Content>

@@ -1,0 +1,91 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" %>
+<%@ Import Namespace="CommunityServer.Components" %>
+<%@ Import Namespace="CommunityServer.Blogs.Components" %>
+<%@ Register TagPrefix="CSUserControl" TagName="UserWelcome" Src="~/utility/usercontrols/UserWelcome.ascx" %>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional-dtd"> 
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head runat="server">
+    <meta http-equiv="X-UA-Compatible" content="IE=7" />
+<CSControl:Head ID="Head1" runat="Server" >
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+	<CSBlog:ThemeStyle Href="~/style/style.css" Media="screen" runat="server" />
+	<CSBlog:ThemeStyle Href="~/style/print.css" Media="print" runat="server" />
+	<CSBlog:WeblogThemeConfigurationDataStyle StyleUrlProperty="secondaryCssUrl" Media="screen" runat="server" />
+	<CSBlog:ThemeStyle Href="~/style/DynamicStyle.aspx" Media="screen" runat="server" EnsureNotCachedOnPreview="true" />
+</CSControl:Head>
+</head>
+<body>
+    <form id="form1" runat="server">
+
+    <TWC:Modal runat="server" CssClasses="Modal" TitleCssClasses="ModalTitle" CloseCssClasses="ModalClose" ContentCssClasses="ModalContent" FooterCssClasses="ModalFooter" ResizeCssClasses="ModalResize" MaskCssClasses="ModalMask" LoadingUrl="~/utility/loading.htm" ID="Modal1" />			
+
+    <div id="masthead">
+        <div id="welcome" align="right">
+            <CSUserControl:UserWelcome runat="server" />
+        </div>
+    </div>
+    <div id="wrapper">
+	        <div id="container">
+		        <div id="header">
+	                <div id="title">
+                        <CSBlog:WeblogData runat="server" Property="Name" CssClass="headermaintitle" Tag="H1" LinkTo="HomePage" />
+	                    <CSBlog:WeblogData runat="server" Property="Description" Tag="P" ContainerId="tagline" />                        
+                    </div>
+                </div>
+                <div id="contentwrapper">
+			        <div id="sidebar-a">
+                        <asp:ContentPlaceHolder ID="SideBar" runat="Server">
+                            
+                            <CSControl:ContentFragmentList runat="server" Property="SidebarWidgets">
+                                <ItemTemplate>
+                                    <CSControl:ContentFragment runat="server">
+                                        <LeaderTemplate>
+                                            <div>
+                                            <CSControl:ConditionalContent runat="server">
+                                                <ContentConditions><CSControl:ContentFragmentPropertyValueComparison runat="server" ComparisonProperty="FragmentMoreUrl" Operator="IsSetOrTrue" /></ContentConditions>
+                                                <TrueContentTemplate><CSControl:ContentFragmentData LinkTo="More" Property="FragmentHeader" Tag="H3" CssClass="CommonSidebarHeader" runat="server" /></TrueContentTemplate>
+                                                <FalseContentTemplate><CSControl:ContentFragmentData Property="FragmentHeader" Tag="H3" CssClass="CommonSidebarHeader" runat="server" /></FalseContentTemplate>
+                                            </CSControl:ConditionalContent>
+                                        </LeaderTemplate>
+                                        <TrailerTemplate>
+                                            </div>
+                                        </TrailerTemplate>
+                                    </CSControl:ContentFragment>
+                                </ItemTemplate>
+                            </CSControl:ContentFragmentList>
+
+	                    </asp:ContentPlaceHolder>
+                    </div>
+                    <div id="content"><div id="content2">
+	                    <asp:ContentPlaceHolder ID = "Main" runat="Server" />        
+                    </div></div>
+                    <div id="contentfooter">&nbsp;</div>
+		        </div>
+                <div id="footer">
+                    <asp:ContentPlaceHolder id="BodyFooterRegion" runat="server" >
+				        <CSControl:SiteSettingsData Property="Copyright" Tag="Div" CssClass="Copyright" runat="server" />
+    				    
+				        <CSControl:PlaceHolder runat="server">
+				            <DisplayConditions Operator="Not"><CSControl:RegistrationPropertyValueComparison ComparisonProperty="IsCommercial" Operator="IsSetOrTrue" runat="server" /></DisplayConditions>
+				            <ContentTemplate>
+				                <a href="http://communityserver.com/" target="_blank"><CSControl:Image ImageUrl="~/utility/PoweredByCS_personal.gif" BorderWidth="0" runat="server" AlternateText='<%# string.Format(CommunityServer.Components.ResourceManager.GetString("Footer_PoweredBy"), "Community Server (Non-Commercial Edition)") %>' /></a>
+						    </ContentTemplate>
+					    </CSControl:PlaceHolder>
+
+                        <CSControl:PlaceHolder runat="server">
+				            <DisplayConditions Operator="And">
+				                <CSControl:RegistrationPropertyValueComparison ComparisonProperty="IsCommercial" Operator="IsSetOrTrue" runat="server" />
+				                <CSControl:SiteSettingsPropertyValueComparison ComparisonProperty="EnableEula" Operator="IsSetOrTrue" runat="server" />
+				            </DisplayConditions>
+				            <ContentTemplate>
+				                <a href="http://communityserver.com/" target="_blank"><CSControl:Image ImageUrl="~/utility/PoweredByCS_commercial.gif" BorderWidth="0" runat="server" AlternateText='<%# string.Format(CommunityServer.Components.ResourceManager.GetString("Footer_PoweredBy"), "Community Server (Commercial Edition)") %>' /></a>
+						    </ContentTemplate>
+					    </CSControl:PlaceHolder>
+    					
+				    </asp:ContentPlaceHolder>
+                </div>
+            </div>        
+        </div>
+    </form>
+</body>
+</html>

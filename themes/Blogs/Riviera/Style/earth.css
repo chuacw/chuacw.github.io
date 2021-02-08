@@ -1,0 +1,45 @@
+
+body {
+	background-color: #5E3D3D;
+}
+a:link,a:hover, a:visited, a:active{color:#B83E47;}
+
+#header{
+	background-color: #465547; 
+}
+
+#container{
+	background-color: #F3F2E2;
+	background-image: none;
+}
+
+dl.comments dt{
+
+	background-color: #DCD4C1;
+
+}
+dl.comments dd{
+
+	background-color: #DCD4C1;
+
+}
+
+dl.comments dt.owner 
+{
+	background-color: #bab2a0;
+}
+dl.comments dd.owner
+{
+	background-color: #bab2a0;
+}
+
+
+.tagcloudlarge
+{
+
+   background-color: #DCD4C1;
+
+}
+.tagcloud a:hover{
+	background-color: #DCD4C1;
+}

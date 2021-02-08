@@ -1,0 +1,633 @@
+/* Simple Blog Skin for CS 2.1 
+   Version 0.55 - 12/07/2006
+   Author: Jaxon Rice - jaxon@soup.co.za
+   More Information: 
+*/
+/* Global White Space Reset 
+   For more information about this technique, go to: 
+	http://leftjustified.net/journal/2004/10/19/global-ws-reset/
+*/
+* { padding:0; margin:0;}
+h1, h2, h3, h4, h5, h6, p, pre, blockquote, label, ul, ol, dl, fieldset, address { margin:1em 0; }
+li, dd, blockquote, label, ul, ol { margin-left: 1em; }
+fieldset { padding:1em; }
+/* End Global White Space Reset*/
+/* tags ------------------------------------------------------------------- */
+html, body {
+	color: #000;
+	margin: 0px;
+	padding: 0px;
+}
+/* I have used Owen Brigg's font sizing technique in this blog skin. 
+   You can read about this technique at:
+	http://www.thenoodleincident.com/tutorials/typography/index.html
+	
+	To change the default font size throughout the site, simply change the
+	font % tag in the body selector
+*/
+body {
+	text-align: center;
+	font: 76%  Arial, Verdana, Helvetica, sans-serif;
+	background-image: url(../images/background.gif);
+	background-repeat: repeat-x;
+	background-position: top left;
+	background-attachment: fixed;
+}
+
+h1 {   
+1.6em;
+}
+
+h2 {
+1.4em;
+}
+h3 {
+1.2em;
+}
+
+h4 {
+1.1em;
+}
+
+h5 {
+1em;
+}
+
+h6 {
+0.9em;
+}
+
+a:link, a:visited,a:hover, a:active{color:#006bad;} 
+/* End tags ---------------------------------------------------------------- */
+/* Layout ------------------------------------------------------------------ */
+#header{
+}
+#content{
+   float:right;
+   width:550px;
+	display: inline;
+	line-height: 1.5em;
+	overflow: hidden;
+}
+#footer{clear:both;text-align:center;margin:1em 2%;}
+
+#wrapper{ 
+}
+#subcontent-a{
+	float: left;
+	width: 200px;
+	display: inline;
+}
+/* End Masthead*/
+#container{
+   text-align: left; 
+	width: 760px;
+	margin: 0px auto ;
+	background-color:#fff;
+}
+/* Header - These selectors style the header of the blog */
+#header{
+   line-height:1em; 
+	font-weight:100;
+	letter-spacing:1px;
+	display:block;
+	border-bottom: 3px solid #999;
+	margin-bottom: 10px;
+}
+#header a{
+   text-decoration: none;
+}
+#header h2{
+   font-size:3em;
+	
+	margin:0;
+	padding:30px 10px 20px 10px;
+	
+}
+#header p{
+display:block;
+line-height: 1.3em;
+font-size:1.3em;
+font-weight: 800;
+margin:0px 10px 10px 10px;
+}
+/* End Header */
+/* End Layout --------------------------------------------------------------- */
+/* Blog Content Styles ------------------------------------------------------ */
+/*This is the header in the content section of pages*/
+.contentheading{
+	font-size:1.5em;
+	font-family: "Apple Garamond", "Times New Roman", "Garamond", serif;
+	font-weight:100;
+	letter-spacing:1px;
+	margin: 10px 20px;
+	font-weight:800;
+}
+/* This is the subheader on content pages*/
+.contentsubheading{
+   color :#999;
+	font-size: 1.4em; 
+	font-weight:100;
+	font-family: "Apple Garamond", "Times New Roman", "Garamond", serif;
+	letter-spacing:1px;
+   margin: 0 20px 10px 20px;
+}
+.breadcrumb{
+font-weight: 400; 
+font-size:1.1em;
+margin: 5px 20px;
+   }
+/* This is the container div for Category Headings*/
+.categorydisplay
+{
+   margin-bottom: 1em;}
+/* Entry List Styles -  The Entry List shows the blog posts on the blog home page */
+dl.entrylist{margin: 0px;}
+dl.entrylist dt{
+	margin: 10px 10px 10px 10px;
+}
+dl.entrylist dt a{
+	text-decoration:none;
+}
+dl.entrylist dd{
+	padding: 0px 10px;
+	margin: 0 0 40px 0; 
+}
+.entrylistfooter{
+	font-size: 0.9em;
+	margin-top: 1em;
+	line-height: 20px;
+}
+.entrylistheader{
+	font-weight: 100;
+	margin-bottom: 10px;
+	font-size: 1.7em;
+	line-height: 1.1em;
+	letter-spacing:1px;
+	font-family: "Apple Garamond", "Times New Roman", "Garamond", serif;
+}
+.entrylistheadersub{
+	color: #888;
+	margin-bottom: 5px;
+	font-size: 1.1em;
+	font-weight: lighter;
+	padding-left: 20px;
+	background: url(../images/date.gif) no-repeat 0 50%;
+}
+.entrylistheadersub a{
+	color: #888;
+}
+/* EntryView Styles - The Entry List shows the blog post on the post page*/
+.entryview{
+	padding: 0px 10px 20px 10px;
+	margin-bottom: 10px;
+}
+.entryviewheading
+{  
+	font-weight: 100;
+	margin: 0 0 5px 0;
+	font-size: 1.7em;
+	line-height: 1.1em;
+	letter-spacing:1px;
+	font-family: "Apple Garamond", "Times New Roman", "Garamond", serif;
+}
+.entryviewheadersub{
+	color: #888;
+	margin-bottom: 10px;
+	font-size: 1.1em;
+	font-weight: lighter;
+	padding-left: 20px;
+	background: url(../images/date.gif) no-repeat 0 50%;
+}
+.entryviewfooter{
+	font-size: 0.9em;
+	margin-top: 1em;
+}
+/* Detailedpostsubscription */
+.subscriptions p{
+	font-size: 0.9em;
+	padding: 2px 20px; 
+}
+/* Comment Styles*/
+dl.comments{
+	margin: 0px;
+	font-size: 0.9em;
+	overflow: hidden;
+	word-wrap: break-word;       /* Internet Explorer 5.5+ */
+}
+dl.comments dt{
+   font-weight: 800;
+	font-size: 1.1em; 
+	margin: 0 20px 0 20px;
+	background-color: #F1F1F1;
+	padding: 10px 10px 5px 10px;
+}
+dl.comments dd{
+	margin: 0 20px 20px 20px;
+	padding: 0 10px 10px 10px;
+	background-color: #F1F1F1; 
+	overflow:hidden;
+}
+.commentsfooter{
+	display:block;
+}
+dl.comments dt.owner 
+{
+	background-color: #cccccc;
+}
+dl.comments dd.owner
+{
+	background-color: #cccccc;
+}
+
+/* This is the message that displays when someone has posted a new comment */
+#commentmessage{
+        padding: 8px 8px 8px 38px;
+        font: 100% bold Tahoma, Arial, Helvetica;
+        color: #334433;
+        border: 1px solid #999999;
+        margin:0 20px;
+        background: #cfe7c0 url(../../../default/images/status-green.gif) no-repeat 5px center;
+        }
+/* Comment and Contact Forms*/
+dl.commentform{
+	margin: 0 20px 30px 20px;
+}
+dl.commentform dt label{
+	margin: 0px;
+}
+dl.commentform dt input{
+	margin: 5px 10px 0 0;
+}
+dl.commentform dd{
+   font-size: 0.9em;
+	margin: 5px 0;
+
+}
+.textline{
+	font: 1em Verdana, Arial, Helvetica, sans-serif;
+	color: #000;
+	padding: 2px;
+	width: 20em;
+	margin-right: 5px;
+
+}
+.textmultiline{
+   color: #000;
+	width: 30em;
+	height: 10em;
+	font:1em Verdana, Arial, Helvetica, sans-serif;
+	padding: 2px;
+	margin-right: 5px;
+
+}
+/* End Blog Content Styles
+/* Blog Sidebar Styles ---------------------------------------------------------- */
+.sideheader{
+	font-size: 1.3em;
+	font-weight: 100;
+	margin: 5px 10px;
+	padding: 2px 0px;
+	color: #777;
+	font-family: "Apple Garamond", "Times New Roman", "Garamond", serif;
+	border-bottom-color: #999;
+	border-bottom-style: solid;
+	border-bottom-width: 1px;
+}
+#subcontent-a ul{
+	list-style-type: none; 
+	margin-left: 10px;
+	margin-right: 10px;
+	margin-bottom:2em;
+}
+#subcontent-a li{
+	font-family: "Apple Garamond", "Times New Roman", "Garamond", serif;
+	padding:5px;
+	display:block;
+	font-size: 1em;
+	margin-left: 0;
+	border-bottom-color: #e4e4e4;
+	border-bottom-style: solid;
+	border-bottom-width: 1px;
+}
+.sidebox{
+}
+ul.inlinelist{
+	display: inline;
+	padding:10px;
+}
+ul.inlinelist li{
+	display: inline;
+}
+/* Search Box */
+.search{
+	padding: 10px 10px 10px 10px;
+
+}
+.searchbox{
+	font-size: 1.2em;
+	font-weight: 800;
+	color: #000;
+	padding: 2px;
+	width: 75%; 
+	margin-right: 5px;
+}
+.searchbutton{
+ font-size: 1.4em; 
+ font-weight: bold;
+ text-decoration:none;
+ color:FFF;
+font-family: "Apple Garamond", "Times New Roman", "Garamond", serif;
+}
+
+/* End Blog Sidebar Styles ------------------------------------------------------ */
+/* tags*/
+/* tag Styles */
+.tagcloud
+{
+	line-height: 200%;
+	padding:0 10px;
+	margin: 0px;
+	margin-bottom:1em;
+	list-style-type: none;
+}
+.tagcloudlarge
+{
+	line-height: 200%;
+	margin:20px;
+	padding: 10px;
+   background-color: #F8F8F8;
+	text-align: center;
+	list-style-type: none;
+}
+.tagcloud a, .tagcloudlarge a{
+	margin: 0 2px;
+	text-decoration:none;
+}
+.tagcloud a:hover{
+	background-color: #DDD;
+}
+
+.tag1, .tag2, .tag3, .tag4, .tag5, .tag6 
+{
+	margin: 0px;
+	padding: 0px;
+	display: inline;
+}
+
+.tag1 a:link, .tag1 a:visited, .tag1 a:active
+{
+   color: #444;
+	font-size: 1.6em;
+	font-weight: 900;
+}
+
+.tag2 a:link, .tag2 a:visited, .tag2 a:active
+{
+color: #444;
+font-size:1.4em;
+font-weight: 800;
+}
+
+.tag3 a:link, .tag3 a:visited, .tag3 a:active
+{
+color: #666;
+font-size:1.3em;
+font-weight: 600;
+}
+
+.tag4 a:link, .tag4 a:visited, .tag4 a:active
+{
+color: #666;
+font-size:1.1em;
+font-weight: 400;
+}
+
+.tag5 a:link, .tag5 a:visited, .tag5 a:active
+{
+color: #888;
+font-size:1em;
+font-weight: 200;
+}
+
+.tag6 a:link, .tag6 a:visited, .tag6 a:active
+{
+color: #888;
+font-size:0.9em;
+font-weight: 100;
+}
+
+/* End tag Styles */
+.rss {
+        text-indent:17px;
+        background: url(../images/rss.gif) no-repeat 0 50%;
+}
+ul.rss li a{
+}
+.aboutauthor{
+	margin: 0 20px 20px 20px;
+}
+.notop{
+	margin-top: 0;
+	border-top: 0px;
+}
+.clearfix:after {
+    content: "."; 
+    display: block; 
+    height: 0; 
+    clear: both; 
+    visibility: hidden;
+}
+
+.clearfix {display: inline-table;}
+
+/* Hides from IE-mac \*/
+* html .clearfix {height: 1%;}
+.clearfix {display: block;}
+/* End hide from IE-mac */
+.filedunder{
+	padding-left: 20px;
+	background: url(../images/tag.gif) no-repeat 0 50%;
+}
+.hiddentext{
+	display: none;
+}
+.commentslink{
+	background: url(../images/comments.gif) no-repeat 0 50%;
+	padding-left: 20px;
+}
+.author{
+	background: url(../images/post.gif) no-repeat 0 50%;
+	padding-left: 20px;
+}
+.attachment{
+	padding-left: 20px;
+	background: url(../images/attachments.gif) no-repeat 0 50%;
+}
+.news{
+padding: 0 10px;
+	
+}/* These style the links page */
+.linklist{
+	float: left;
+	width: 33%;
+	font-size: 0.9em;
+}
+.linklist h4{
+	font-size: 1.3em;
+	font-weight: 800;
+
+	margin: 1em 1em 0 0;
+}
+.linklist dl{
+	margin: 1em 1em 1em 0;
+}
+.linklist dl dt{
+	margin: 0.5em 0 0.2em 0;
+}
+.linklist dl dd{
+	margin: 0;
+}
+/* Inline tag editor */
+.InlineTagEditor
+{
+	padding: 4px;
+	border: solid 1px #999999;
+	background-color: #f3f3f3;
+}
+
+.TextButton
+{
+	display: inline-table;
+	display: -moz-inline-box;
+	display: inline-block;
+	margin: 1px;
+	padding: 4px;
+	border-style: solid;
+	border-width: 1px;
+	border-color: #999999;
+	border-top-color: #cccccc;
+	border-left-color: #cccccc;
+	background-color: #eeeeee;
+	color: #333333;
+	font-family: Tahoma, Arial, Helvetica;
+	font-size: 80%;
+	font-weight: bold;
+	white-space: nowrap;
+}
+
+.TextButton:LINK
+{
+	text-decoration: none;
+	color: #333333;
+	background-color: #eeeeee;
+}
+
+.TextButton:VISITED
+{
+	text-decoration: none;
+	color: #333333;
+	background-color: #eeeeee;
+}
+
+.TextButton:ACTIVE
+{
+	text-decoration: none;
+	color: #333333;
+}
+
+.TextButton:HOVER
+{
+	text-decoration: underline;
+	color: #333333;
+	background-color: #dddddd;
+}
+
+/* Modal Styles */
+
+.ModalMask
+{
+	opacity: .4;
+	filter: alpha(opacity=40);
+	background-color: #333333;
+}
+
+.Modal
+{
+	border-style: solid;
+	border-width: 1px;
+	border-color: #888888;
+	border-right-width: 3px;
+	border-right-color: #888888;
+	border-bottom-width: 3px;
+	border-bottom-color: #888888;
+	background-color: #eeeeee;
+}
+
+.ModalTitle
+{
+	font-family: Tahoma, Arial, Helvetica;
+	height: 18px;
+	font-size: 16px;
+	padding: 5px;
+	padding-bottom: 7px;
+	border-style: solid;
+	border-width: 0px;
+	border-bottom-width: 1px;
+	border-color: #cccccc;
+	background-color: #dddddd;
+	color: #000000;
+	font-weight: bold;
+	cursor: move;
+	overflow: hidden;
+	text-align: left;
+}
+
+.ModalClose
+{
+	width: 33px;
+	height: 12px;
+	background-image: url(../../../default/images/common/close.gif);
+	background-repeat: no-repeat;
+	overflow: hidden;
+	cursor: pointer;
+	float: right;
+}
+
+.ModalContent
+{
+	background-color: #ffffff;
+}
+
+.ModalFooter
+{
+	border-style: solid;
+	border-width: 0px;
+	border-top-width: 1px;
+	border-color: #cccccc;
+	background-color: #eeeeee;
+	padding: 2px;
+}
+
+.ModalResize
+{
+	width: 14px;
+	height: 14px;
+	background-image: url(../../../default/images/common/resize.gif);
+	background-repeat: no-repeat;
+	overflow: hidden;
+	float: right;
+	cursor: se-resize;
+}
+
+/* Subscription Styles */
+.BlogSubNotification
+{
+	color: #FF0000;
+	font-size: 80%;
+}
+
+.SubscriptionButton
+{
+	margin-left: 0px;
+}

@@ -1,0 +1,59 @@
+/*
+Overrides
+*/
+
+#CommonFooter
+{
+	display: none;
+}
+
+#CommonHeader
+{
+	display: none;
+}
+
+.Common
+{
+	padding: 0px;
+	margin: 0px;
+	border-width: 0;
+	background-color: #fff;
+	width: auto;
+}
+
+body, html
+{
+	background-image: none;
+	margin: 0px;
+	padding: 4px;
+	background-color: #fff;
+	border-style: none;
+}
+
+form
+{
+    min-width: 0;
+}
+
+.CommonContentArea
+{
+	padding: 0px;
+    margin: 0px;
+	background-color: #fff;
+}
+
+.CommonContent
+{
+	border-width: 0;
+	background-color: #fff;
+}
+
+.CommonFormArea
+{
+    margin: 0;
+}
+
+/*
+Modal Styles
+*/
+

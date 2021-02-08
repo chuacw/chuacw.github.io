@@ -1,0 +1,92 @@
+<%@ Master Language="C#" AutoEventWireup="true" MasterPageFile="~/Themes/hawaii/blogs/blogs.master" %>
+<%@ Import Namespace="CommunityServer.Components" %>
+<%@ Import Namespace="CommunityServer.Blogs.Components" %>
+
+<asp:Content ContentPlaceHolderID="HeaderRegion" runat="server" >
+    <CSBlog:ThemeStyle runat="server" Href="~/style/DynamicStyle.aspx" EnsureNotCachedOnPreview="true" />
+    <CSBlog:WeblogPostData runat="server" Property="Excerpt">
+        <LeaderTemplate><meta name="Description" content="</LeaderTemplate>
+        <TrailerTemplate>"></TrailerTemplate>
+    </CSBlog:WeblogPostData>
+</asp:Content>
+
+<asp:Content ContentPlaceHolderID="bbcr" runat="server">
+    <asp:ContentPlaceHolder ID="bbcr" runat="server" />
+</asp:Content>
+
+<asp:Content ContentPlaceHolderID="sr" runat="server">
+    <asp:ContentPlaceHolder ID="sr" runat="server">
+        <CSBlog:SearchForm runat="server" 
+            QueryTextBoxId="TitleBarSearchText" 
+            SubmitButtonId="TitleBarSearchButton"
+            >
+            <FormTemplate>
+                <div class="CommonSearchArea">
+                    <div class="CommonSearchRoundTop"><div class="r1"></div><div class="r2"></div><div class="r3"></div><div class="r4"></div></div>
+                    <div class="CommonSearchContent"><div class="CommonSearchContentInner">
+                        <CSControl:DefaultButtonTextBox id="TitleBarSearchText" runat="server" columns="15" maxlength="64" ButtonId="TitleBarSearchButton" /><asp:Button id="TitleBarSearchButton" runat="server" Text="&nbsp;" CssClass="CommonSearchButton" CausesValidation="false" />
+                    </div></div>
+                    <div class="CommonSearchRoundBottom"><div class="r1"></div><div class="r2"></div><div class="r3"></div><div class="r4"></div></div>
+                </div>
+            </FormTemplate>
+        </CSBlog:SearchForm>
+    </asp:ContentPlaceHolder>
+</asp:Content>
+
+<asp:Content ContentPlaceHolderID="tr" runat="server">
+    <asp:ContentPlaceHolder ID="tr" runat="server" />
+</asp:Content>
+
+<asp:Content ContentPlaceHolderID="bcr" runat="server">
+   <asp:ContentPlaceHolder runat="server" ID="bcr" />
+</asp:Content>
+
+<asp:Content ContentPlaceHolderID="rcr" runat="server">
+    <asp:ContentPlaceHolder ID="rcr" runat="Server">
+        <div class="CommonSidebar">
+        
+            <div class="CommonContentBox Highlighted2">
+                <div class="CommonContentBoxContent">
+   	                <div style="font-size: 150%; margin-bottom: .5em;">
+                        <CSBlog:WeblogData Property="Name" runat="server" Tag="Strong" />
+   	                </div>
+                    <ul class="CommonContentBoxList">
+	                    <CSBlog:WeblogData runat="server" LinkTo="HomePage" ResourceName="Home" Tag="LI" style="font-weight: bold;" />
+	                    <CSBlog:WeblogData runat="server" LinkTo="About" ResourceName="Weblog_Link_AboutAuthor" Tag="LI" style="font-weight: bold;" />
+	                    <CSBlog:WeblogData runat="server" LinkTo="ContactForm" ResourceName="Weblog_Link_Contact" Tag="LI" style="font-weight: bold;" />
+	                </ul>
+	                <CSBlog:WeblogPostData runat="server" LinkTo="PostEditor" ResourceName="Weblog_Link_EditPost">
+	                    <LeaderTemplate><ul class="CommonContentBoxList Seperator"><li></LeaderTemplate>
+	                    <TrailerTemplate></li></ul></TrailerTemplate>
+	                </CSBlog:WeblogPostData>
+	                <CSBlog:WeblogData runat="server" LinkTo="PostEditor" ResourceName="Weblog_Link_NewPost">
+	                    <LeaderTemplate><ul class="CommonContentBoxList Seperator"><li></LeaderTemplate>
+	                    <TrailerTemplate></li></ul></TrailerTemplate>
+	                </CSBlog:WeblogData>
+	                <CSBlog:WeblogData runat="server" LinkTo="PostControlPanel" ResourceName="Weblog_Link_ControlPanel">
+	                    <LeaderTemplate><ul class="CommonContentBoxList Seperator"><li></LeaderTemplate>
+	                    <TrailerTemplate></li></ul></TrailerTemplate>
+	                </CSBlog:WeblogData>
+                </div>
+            </div>
+        
+            <CSControl:ContentFragmentList runat="server" Property="DefaultBlogWidgets">
+	            <ItemTemplate>
+	                <CSControl:ContentFragment runat="server">
+	                    <LeaderTemplate>
+	                        <div class="CommonContentBox">
+                                <CSControl:ContentFragmentData Property="FragmentHeader" runat="server" Tag="H4" CssClass="CommonContentBoxHeader" />
+	                            <div class="CommonContentBoxContent">
+	                    </LeaderTemplate>
+	                    <TrailerTemplate>
+				                </div>
+				                <CSControl:ContentFragmentData Text="View more" LinkTo="More" runat="server" Tag="Div" CssClass="CommonContentBoxFooter" />
+			                </div>
+	                    </TrailerTemplate>
+	                </CSControl:ContentFragment>
+	            </ItemTemplate>
+	        </CSControl:ContentFragmentList>
+
+        </div>
+    </asp:ContentPlaceHolder>
+</asp:Content>

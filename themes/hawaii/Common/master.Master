@@ -1,0 +1,172 @@
+<%@ Master Language="C#" AutoEventWireup="true" %>
+<%@ Register TagPrefix="CSUserControl" TagName="UserWelcome" Src="UserWelcome.ascx" %>
+<%@ Register TagPrefix="CSUserControl" TagName="AdTop" Src="Ad-Top.ascx" %>
+<%@ Register TagPrefix="CSUserControl" TagName="AdBottom" Src="Ad-Bottom.ascx" %>
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd"> 
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+    <head runat="server">
+    <meta http-equiv="X-UA-Compatible" content="IE=7" />
+    <CSControl:Head runat="Server" >
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+        <CSControl:Style runat="server" visible = "true" />
+        <CSControl:Style runat="server" visible = "true" Href="~/themes/hawaii/style/Common.css" Media="screen,print" />
+        <CSControl:Style runat="server" Href="~/themes/hawaii/style/common_print.css" media="print" />
+        <asp:ContentPlaceHolder runat="server" id="HeaderRegion" />
+        <CSControl:Style runat="server" Href="~/themes/hawaii/style/DynamicStyle.aspx" EnsureNotCachedOnPreview="true" />
+        <!--[if lte IE 6]>
+            <CSControl:Style runat="server" Href="~/themes/hawaii/style/ie6.css" />
+        <![endif]-->
+    </CSControl:Head>
+    </head>
+	<body>
+		<form runat="server">
+			<TWC:Modal ID="Modal1" runat="server" CssClasses="CommonModal" TitleCssClasses="CommonModalTitle" CloseCssClasses="CommonModalClose" ContentCssClasses="CommonModalContent" FooterCssClasses="CommonModalFooter" ResizeCssClasses="CommonModalResize" MaskCssClasses="CommonModalMask" LoadingUrl="~/utility/loading.htm" />			
+
+			<asp:ContentPlaceHolder id="bscr" runat="server" />
+
+		    <asp:ContentPlaceHolder id="bhcr" runat="server" >
+		        <div id="CommonHeader">
+		            <div class="Common">
+		                <div id="CommonHeaderTitleArea">
+		                    <table cellpadding="0" cellspacing="0" border="0"><tr valign="middle">
+		                        <td><CSControl:SiteThemeConfigurationDataImage runat="server" ImageUrlProperty="logoUrl" ThemeName="hawaii" style="margin-right: 10px;" /></td>
+		                        <td>
+		                            <CSControl:SiteSettingsData runat="server" Property="SiteName" Tag="Div" CssClass="CommonHeaderTitle" />
+		                            <CSControl:SiteSettingsData runat="server" Property="SiteDescription" Tag="Div" CssClass="CommonHeaderTitleDescription" />
+		                        </td>
+		                    </tr></table>
+		                </div>
+		                <div id="CommonHeaderUserArea">
+		                    <table cellpadding="0" cellspacing="0" border="0"><tr valign="top"><td>
+                                <div id="CommonHeaderUserContent">
+                                    <div id="CommonHeaderUserWelcome">
+                                        <CSUserControl:UserWelcome runat="server" />
+                                    </div>
+                                </div>
+                            </td></tr></table>
+                        </div>
+                    </div>
+                </div>
+                <div id="CommonNavigation">
+                    <div class="Common"><div class="Inner">
+                        <CSControl:NavigationList runat="server" Level="0" Theme="hawaii" Property="navigationItems" RenderChildrenInContextMenu="false">
+                            <HeaderTemplate><ul></HeaderTemplate>
+                            <ItemTemplate>
+                                <CSControl:CSLinkData runat="server" Tag="Li" LinkCssClass="Selected" LinkTo="Link" Property="Text">
+                                    <DisplayConditions><CSControl:CSLinkPropertyValueComparison runat="server" ComparisonProperty="IsSelected" Operator="IsSetOrTrue" /></DisplayConditions>
+                                </CSControl:CSLinkData>
+                                <CSControl:CSLinkData runat="server" Tag="Li" LinkTo="Link" Property="Text">
+                                    <DisplayConditions Operator="Not"><CSControl:CSLinkPropertyValueComparison runat="server" ComparisonProperty="IsSelected" Operator="IsSetOrTrue" /></DisplayConditions>
+                                </CSControl:CSLinkData>
+                            </ItemTemplate>
+                            <FooterTemplate></ul></FooterTemplate>
+                        </CSControl:NavigationList>
+                        <div style="clear: both;"></div>
+                     </div></div>
+                </div>
+                <CSControl:NavigationList runat="server" Level="1" Theme="hawaii" Property="navigationItems" RenderChildrenInContextMenu="false" ShowHeaderFooterOnNone="false">
+                    <HeaderTemplate>
+                        <div id="CommonNavigation2">
+                            <div class="Common"><div class="Inner">
+                                <ul>
+                    </HeaderTemplate>
+                    <ItemTemplate>
+                        <CSControl:CSLinkData runat="server" Tag="Li" LinkCssClass="Selected" LinkTo="Link" Property="Text">
+                            <DisplayConditions><CSControl:CSLinkPropertyValueComparison runat="server" ComparisonProperty="IsSelected" Operator="IsSetOrTrue" /></DisplayConditions>
+                        </CSControl:CSLinkData>
+                        <CSControl:CSLinkData runat="server" Tag="Li" LinkTo="Link" Property="Text">
+                            <DisplayConditions Operator="Not"><CSControl:CSLinkPropertyValueComparison runat="server" ComparisonProperty="IsSelected" Operator="IsSetOrTrue" /></DisplayConditions>
+                        </CSControl:CSLinkData>
+                    </ItemTemplate>
+                    <NoneTemplate>
+                        <div id="CommonNavigation2Empty"></div>
+                    </NoneTemplate>
+                    <FooterTemplate>
+                                </ul>
+                            </div></div>
+                        </div>
+                    </FooterTemplate>
+                </CSControl:NavigationList>
+                <div id="CommonNavigationShadow">
+                    <asp:ContentPlaceHolder runat="server" ID="bbcr" />
+                </div>
+		    </asp:ContentPlaceHolder>
+                        
+            <div class="Common">
+            
+            <!-- AdPart chuacw -->
+                <CSControl:AdPart runat = "Server" contentname="StandardTop" ContentCssClass="CommonContentPartBorderOff" ContentHoverCssClass="CommonContentPartBorderOn">
+	                <DefaultContentTemplate>
+	                    <CSUserControl:AdTop runat="server" />
+	                </DefaultContentTemplate>
+	            </CSControl:AdPart>
+            
+                <div id="CommonSearch">
+                    <asp:ContentPlaceHolder ID="sr" runat="server">
+                        <CSControl:SearchForm runat="server" 
+                            QueryTextBoxId="TitleBarSearchText" 
+                            SubmitButtonId="TitleBarSearchButton"
+                            DefaultSearchText="Search this site"
+                            >
+                            <FormTemplate>
+                                <div class="CommonSearchArea">
+                                    <div class="CommonSearchRoundTop"><div class="r1"></div><div class="r2"></div><div class="r3"></div><div class="r4"></div></div>
+                                    <div class="CommonSearchContent"><div class="CommonSearchContentInner">
+                                        <CSControl:DefaultButtonTextBox id="TitleBarSearchText" runat="server" columns="15" maxlength="64" ButtonId="TitleBarSearchButton" onkeyup="if (this.value == '') this.className = 'CommonSearchInputEmpty'; else this.className = 'CommonSearchInputNormal';" class="CommonSearchInputEmpty" /><asp:Button id="TitleBarSearchButton" runat="server" Text="&nbsp;" CssClass="CommonSearchButton" CausesValidation="false" />
+                                    </div></div>
+                                    <div class="CommonSearchRoundBottom"><div class="r1"></div><div class="r2"></div><div class="r3"></div><div class="r4"></div></div>
+                                </div>
+                            </FormTemplate>
+                        </CSControl:SearchForm>
+                    </asp:ContentPlaceHolder>
+                </div>
+                <div id="CommonTitle">
+                    <asp:ContentPlaceHolder id="tr" runat="server" />
+                </div>
+                <div style="clear: both;"></div>
+			    <div id="CommonSidebarRight">
+			        <asp:ContentPlaceHolder id="rcr" runat="server" />
+			    </div>
+                <div id="CommonSidebarLeft">
+				    <asp:ContentPlaceHolder id="lcr" runat="server" />
+				</div>
+			    <div id="CommonContent"><div id="CommonContentInner"><asp:ContentPlaceHolder id="bcr" runat="server" /></div></div>
+			    <div style="clear: both;"></div>
+			    <!-- AdPart chuacw 1 May 2011 -->
+			    <CSControl:AdPart runat="Server" ContentName="StandardBottom" ContentCssClass="CommonContentPartBorderOff" ContentHoverCssClass="CommonContentPartBorderOn">
+	                <DefaultContentTemplate>
+	                    <CSUserControl:AdBottom runat="server" />
+	                </DefaultContentTemplate>
+	            </CSControl:AdPart>
+            </div>
+                
+            <div id="CommonFooter">
+                <div class="Common">
+                    <asp:ContentPlaceHolder id="BodyFooterRegion" runat="server" >
+                        <CSControl:SiteSettingsData Property="Copyright" Tag="Div" runat="server" />
+                	    
+                        <CSControl:PlaceHolder runat="server">
+                            <DisplayConditions Operator="Not"><CSControl:RegistrationPropertyValueComparison ComparisonProperty="IsCommercial" Operator="IsSetOrTrue" runat="server" /></DisplayConditions>
+                            <ContentTemplate>
+                                <a href="http://communityserver.com/" target="_blank"><CSControl:Image ImageUrl="~/utility/PoweredByCS_personal.gif" BorderWidth="0" runat="server" AlternateText='<%# string.Format(CommunityServer.Components.ResourceManager.GetString("Footer_PoweredBy"), "Community Server (Non-Commercial Edition)") %>' /></a>
+		                    </ContentTemplate>
+	                    </CSControl:PlaceHolder>
+
+                        <CSControl:PlaceHolder runat="server">
+                            <DisplayConditions Operator="And">
+                                <CSControl:RegistrationPropertyValueComparison ComparisonProperty="IsCommercial" Operator="IsSetOrTrue" runat="server" />
+                                <CSControl:SiteSettingsPropertyValueComparison ComparisonProperty="EnableEula" Operator="IsSetOrTrue" runat="server" />
+                            </DisplayConditions>
+                            <ContentTemplate>
+                                <a href="http://communityserver.com/" target="_blank"><CSControl:Image ImageUrl="~/utility/PoweredByCS_commercial.gif" BorderWidth="0" runat="server" AlternateText='<%# string.Format(CommunityServer.Components.ResourceManager.GetString("Footer_PoweredBy"), "Community Server (Commercial Edition)") %>' /></a>
+		                    </ContentTemplate>
+	                    </CSControl:PlaceHolder>
+                		
+                    </asp:ContentPlaceHolder>
+                 </div>
+            </div>
+		</form>
+		<asp:ContentPlaceHolder id="outsidetheform" runat="server" />
+	</body>
+</html>

@@ -1,0 +1,26 @@
+/*  "Blue" variant of "Simple" skin for CS 1.0.*/
+
+a:visited,
+a:active,
+a:link {	
+	text-decoration: none;
+	color: #006bad;}
+	
+#sidebar-a h3 {
+	background: #7ba5ce;
+}
+
+.postsubhead{
+	background: #7ba5ce;
+}
+.commentalt{
+	background-color: #f2f7fd;
+	}
+#Cal a,	
+#Cal a:active,
+#Cal a:visited,
+#Cal a:link {
+	text-decoration : none;
+	font-weight: bold;
+	font-size: 1em;
+}

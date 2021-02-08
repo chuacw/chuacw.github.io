@@ -1,0 +1,120 @@
+<%@ Master Language="C#" AutoEventWireup="true" MasterPageFile="~/Themes/hawaii/hubs/hubs.master" %>
+
+<asp:Content ContentPlaceHolderID="HeaderRegion" runat="server" >
+    <CSControl:Style runat="server" Href="~/themes/hawaii/style/forum.css" Media="screen,print" />
+    <CSControl:Style runat="server" Href="~/themes/hawaii/style/forum_print.css" Media="print" />
+    <CSControl:Style runat="server" Href="~/themes/hawaii/style/wiki.css" Media="screen,print" />
+    <CSControl:Style runat="server" Href="~/themes/hawaii/style/wiki_print.css" Media="print" />
+    <CSHub:ThemeStyle runat="server" Href="~/style/DynamicStyle.aspx" EnsureNotCachedOnPreview="true" />
+</asp:Content>
+
+<asp:Content ContentPlaceHolderID="bbcr" runat="server">
+    <asp:ContentPlaceHolder ID="bbcr" runat="server" />
+</asp:Content>
+
+
+<asp:Content ContentPlaceHolderID="sr" runat="server">
+    <asp:ContentPlaceHolder ID="sr" runat="server">
+        <CSControl:SearchForm runat="server" 
+            QueryTextBoxId="TitleBarSearchText" 
+            SubmitButtonId="TitleBarSearchButton"
+            DefaultSearchText="Search this site"
+            >
+            <FormTemplate>
+                <div class="CommonSearchArea">
+                    <div class="CommonSearchRoundTop"><div class="r1"></div><div class="r2"></div><div class="r3"></div><div class="r4"></div></div>
+                    <div class="CommonSearchContent"><div class="CommonSearchContentInner">
+                        <CSControl:DefaultButtonTextBox id="TitleBarSearchText" runat="server" columns="15" maxlength="64" ButtonId="TitleBarSearchButton" onkeyup="if (this.value == '') this.className = 'CommonSearchInputEmpty'; else this.className = 'CommonSearchInputNormal';" class="CommonSearchInputEmpty" /><asp:Button id="TitleBarSearchButton" runat="server" Text="&nbsp;" CssClass="CommonSearchButton" CausesValidation="false" />
+                    </div></div>
+                    <div class="CommonSearchRoundBottom"><div class="r1"></div><div class="r2"></div><div class="r3"></div><div class="r4"></div></div>
+                </div>
+            </FormTemplate>
+        </CSControl:SearchForm>
+    </asp:ContentPlaceHolder>
+</asp:Content>
+
+<asp:Content ContentPlaceHolderID="tr" runat="server">
+    <asp:ContentPlaceHolder ID="tr" runat="server" />
+</asp:Content>
+
+<asp:Content ContentPlaceHolderID="bcr" runat="server">
+    <asp:ContentPlaceHolder runat="server" ID="bcr" />
+</asp:Content>
+
+<asp:Content ContentPlaceHolderID="rcr" runat="server">
+    <asp:ContentPlaceHolder ID="rcr" runat="Server">
+        <div class="CommonSidebar">
+        
+            <div class="CommonContentBox Highlighted2">
+                <div class="CommonContentBoxContent">
+                    <div style="float: left; margin: 0 10px 10px 0;">
+	                    <CSHub:HubAvatar runat="server" Width="60" Height="60" />
+	                </div>
+   	                <div style="margin-left: 70px; font-size: 150%;">
+                        <CSHub:HubData Property="Name" runat="server" Tag="Strong" />
+   	                </div>
+   	                <div style="margin-left: 70px; font-size: 100%;">
+   	                    <CSMail:MailingListData ResourceName="Hubs_GroupEmailList" Property="EmailAddress" LinkTo="MailingList" runat="server" />
+   	                </div>
+	                <div style="clear: both;"></div>
+                    <ul class="CommonContentBoxList">
+	                    <CSHub:HubData LinkTo="HomePage" Text="Home" runat="server" Tag="LI" style="font-weight: bold;" />
+	                    <CSBlog:WeblogData LinkTo="HomePage" Text="Blog" runat="server" Tag="LI" style="font-weight: bold;" />
+	                    <CSForum:ForumData LinkTo="HomePage" Text="Discussions" runat="server" Tag="LI" style="font-weight: bold;" />
+	                    <CSMedia:MediaGalleryData LinkTo="MediaGalleryHome" Text="Media" runat="server" Tag="LI" style="font-weight: bold;" />
+	                    <CSWiki:WikiData  LinkTo="HomePage" Text="Wiki" runat="server" Tag="LI" style="font-weight: bold;" />
+	                    <CSHub:HubData LinkTo="PageList" Text="Pages" runat="server" Tag="LI" style="font-weight: bold;" />
+	                 </ul>
+	                 <ul class="CommonContentBoxList Seperator">
+	                    <CSHub:HubData LinkTo="MemberList" Text="Members" runat="server" Tag="LI" />
+	                    <CSHub:HubData LinkTo="Contact" Text="Contact" runat="server" Tag="LI" />
+	                </ul>
+	                <asp:ContentPlaceHolder ID="rcrc" runat="server" />
+	                <ul class="CommonContentBoxList Seperator">
+	                    <CSHub:HubData LinkTo="Rss" Text="RSS" runat="server" Tag="LI" />
+	                    <CSHub:HubSubscriptionToggleButton runat="server" Tag="LI" />
+	                </ul>
+                </div>
+            </div>
+            
+            <asp:ContentPlaceHolder runat="server" ID="rcrb" />
+            
+            <CSControl:ContentFragmentList runat="server" Property="DefaultGroupWidgets">
+	        <ItemTemplate>
+	            <CSControl:ContentFragment runat="server">
+	                <LeaderTemplate>
+	                    <div class="CommonContentBox">
+                            <CSControl:ContentFragmentData Property="FragmentHeader" runat="server" Tag="H4" CssClass="CommonContentBoxHeader" />
+	                        <div class="CommonContentBoxContent">
+	                </LeaderTemplate>
+	                <TrailerTemplate>
+				            </div>
+				            <CSControl:ContentFragmentData Text="View more" LinkTo="More" runat="server" Tag="Div" CssClass="CommonContentBoxFooter" />
+			            </div>
+	                </TrailerTemplate>
+	            </CSControl:ContentFragment>
+	        </ItemTemplate>
+	        </CSControl:ContentFragmentList>
+	        
+            <asp:ContentPlaceHolder ID="rcra" runat="server" />
+            
+            <CSControl:PlaceHolder runat="server" Tag="Div" CssClass="CommonContentBox Highlighted2">
+                <DisplayConditions><CSHub:HubPermissionCondition runat="server" Permission="Post" /></DisplayConditions>
+                <ContentTemplate>
+                    <h4 class="CommonContentBoxHeader">Administration</h4>
+                    <div class="CommonContentBoxContent">
+	                     <ul class="CommonContentBoxList">
+	                        <CSHub:HubData LinkTo="Edit" Text="Edit this Group" runat="server" Tag="LI" />
+	                        <CSHub:HubData LinkTo="EditTheme" Text="Edit this Theme" runat="server" Tag="LI" />
+	                        <CSForum:ForumData LinkTo="Moderate" Text="Moderate Discussions" runat="server" Tag="LI" />
+	                        <CSMedia:MediaGalleryData LinkTo="Moderate" Text="Moderate Media" runat="server" Tag="LI" />
+	                        <CSHub:HubData LinkTo="ContactRequests" ResourceName="Hubs_ContactRequest" runat="server" Tag="LI" />
+	                    </ul>
+                    </div>
+                </ContentTemplate>
+            </CSControl:PlaceHolder>
+       
+        </div>
+    </asp:ContentPlaceHolder>
+</asp:Content>
+

@@ -1,0 +1,31 @@
+﻿.CommonCommentContent
+{
+	height: 1%;
+}
+
+.CommonCommentBubbleRoundTop, .CommonCommentBubbleRoundBottom
+{
+	width: 100%;
+	overflow: hidden;
+}
+
+.Normal .CommonCommentBubble, .Verified .CommonCommentBubble, .Suggested .CommonCommentBubble, .VerifiedTop .CommonCommentBubble
+{
+	margin: 0;
+	float: left;
+}
+
+.Editor .CommonCommentBubble
+{
+	margin-left: 0px;
+}
+
+.ThreadStarter .CommonCommentBubble
+{
+	margin-right: 0px;
+}
+
+.WikiCommentContent
+{
+	height: 1%;
+}

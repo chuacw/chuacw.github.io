@@ -1,0 +1,948 @@
+/* KidCongo Blog Skin for CS 2.1 
+   Version 0.34 - 12/07/2006
+*/
+/* Global White Space Reset 
+   For more information about this technique, go to: 
+	http://leftjustified.net/journal/2004/10/19/global-ws-reset/
+*/
+* { padding:0; margin:0;}
+h1, h2, h3, h4, h5, h6, p, pre, blockquote, label, ul, ol, dl, fieldset, address { margin:1em 0; }
+li, dd, blockquote, label, ul, ol { margin-left: 1em; }
+fieldset { padding:1em; }
+/* End Global White Space Reset*/
+/* tags ------------------------------------------------------------------- */
+html, body {
+	color: #222;
+	margin: 0px;
+	padding: 0px;
+}
+/* I have used Owen Brigg's font sizing technique in this blog skin. 
+   You can read about this technique at:
+	http://www.thenoodleincident.com/tutorials/typography/index.html
+	
+	To change the default font size throughout the site, simply change the
+	font % tag in the body selector
+*/
+body {
+	text-align: center;
+	font: 86% "Trebuchet MS", Arial, Helvetica, sans-serif; 
+	line-height: 1.2em;
+}
+h1{
+	font-size: 1.6em;
+}
+h2{font-size: 1.4em;}
+h3{font-size: 1.3em;}
+h4{font-size: 1.2em;}
+h5{font-size: 1.1em;}
+h6{font-size: 0.9em;}
+a:link, a:visited, a:hover, a:active{
+color: #666;
+text-decoration: underline;
+}
+a:hover{
+	color: #ACACAC;
+}
+code {
+color: #D72860;
+font-family:"Courier New",monospace;
+font-size: 1em;
+line-height: 1.2em;}
+
+blockquote{
+	color: #666;
+	background: url(../images/blockquote.gif) no-repeat top left;
+	margin-right: 1em;
+	padding: 1em 1em 1em 2.5em;
+}
+/* End tags ---------------------------------------------------------------- */
+/* Layout ------------------------------------------------------------------ */
+#wrapper{
+	margin: 10px auto;
+	background-color: #FFF;
+	text-align: left;
+}
+.mainwrapper {width:980px;}
+.altwrapper {width:735px;}
+#content{
+	float: left;
+	width: 480px;
+	margin-right: 10px;
+	line-height: 1.4em;
+	overflow: hidden;
+}
+#sidebar-a{
+	float: right;
+	font-size: 0.9em;
+}
+.mainsidebar{
+	width: 490px;
+}
+.altsidebar{
+	width:245px;
+}
+#footer{
+	clear: both;
+	padding: 10px 0 10px 0;
+	font-size: 0.8em;
+	text-align: center;
+	border-top: 2px solid #F1F1F1;
+	margin: 30px 20px 0 20px;
+	text-align: left;
+}
+/* End Layout --------------------------------------------------------------- */
+/* Blog Content Styles ------------------------------------------------------ */
+/*This is the header in the content section of pages*/
+.contentheading{
+	margin: 20px 10px 10px 20px;
+	font-size: 1.4em;
+	color: #acacac;
+	font-weight: 600;
+	font-family: Helvetica, Arial,  sans-serif;
+}
+.contentheading a:link, .contentheading a:visited,
+.contentheading a:hover, .contentheading a:active{
+	color: #7FAC20;
+	border: none;
+}
+/* This is the subheader on content pages*/
+.contentsubheading{
+	margin: 0px 10px 10px 20px;
+	font-size: 1.2em;
+	color: #acacac;
+	font-weight: 600;
+	font-family: Helvetica, Arial, sans-serif;
+}
+/* This is the container div for Category Headings*/
+.categorydisplay
+{
+   margin-bottom: 1em;}
+/* Entry List Styles -  The Entry List shows the blog posts on the blog home page */
+dl.entrylist{
+	margin: 20px 10px 10px 10px;
+}
+dl.entrylist dt{
+	font-size: 1.5em;
+	line-height: 1.3em;
+	font-family: Helvetica, Arial, sans-serif;
+	letter-spacing: -1px;
+	font-weight: 100;
+	margin: 0px;
+	padding: 10px 10px 0px 10px;
+	background: url(../images/greenside.jpg) repeat-y right top;
+}
+
+dl.entrylist dt a:link, dl.entrylist dt a:visited, dl.entrylist dt a:active{
+	color: #7FAC20;
+	text-decoration: none;
+}
+dl.entrylist dt a:hover{
+	color: #9FD728;
+	text-decoration: none;
+}
+
+dl.entrylist dt a.listdate:link, dl.entrylist dt a.listdate:visited,
+dl.entrylist dt a.listdate:hover, dl.entrylist dt a.listdate:active{
+	text-decoration: none;
+	border: none;
+	font-size: 0.8em;
+	letter-spacing: 0px;
+	line-height: 1.1em;
+	font-weight: 100;
+	color: #888;
+}
+dl.entrylist dd{
+	margin-left: 0px;
+	padding: 5px 10px 10px 10px;
+	margin-right: 0px;
+	margin-bottom: 1.5em;
+	background: url(../images/greenfade.jpg) repeat-y right top;
+}
+.entrylistfooter{
+	font-size: 0.9em;
+	margin-top: 0.5em;
+	padding-top: 0.5em;
+	border-top-color: #f1f1f1;
+	border-top-style: solid;
+	border-top-width: 1px;
+}
+/* EntryView Styles - The Entry List shows the blog post on the post page*/
+.entryview{
+	margin: 20px 10px 10px 10px;
+	padding: 10px;
+	background: url(../images/greenside.jpg) repeat-y right top;
+}
+.entryviewdate{
+	font-size: 1.2em;
+	letter-spacing: 0px;
+	line-height: 1.3em;
+	font-weight: 100;
+	color: #888;
+	font-family: Helvetica, Arial, sans-serif;
+}
+.entryviewheading
+{
+	font-size: 1.5em;
+	line-height: 1.1em;
+	font-family: Helvetica, Arial, sans-serif;
+	letter-spacing: -1px;
+	font-weight: 100;
+	margin: 0 0 0.5em 0;
+}
+.entryviewfooter{
+	font-size: 0.9em;
+	margin-top: 0em;
+}
+/* Detailedpostsubscription */
+.subscriptions p{
+	font-size: 0.9em;
+}
+/* Comment Styles*/
+dl.comments{
+	margin: 10px 10px 10px 20px;
+	font-size: 0.9em;
+	line-height: 1.2em;
+	overflow: hidden;
+	word-wrap: break-word;       /* Internet Explorer 5.5+ */	
+}
+dl.comments dt{
+   background: url(../images/comments.jpg) repeat-y left top;
+	padding: 10px 10px 0px 10px;
+	margin: 0px;
+	font-size: 1.2em;
+	letter-spacing: 0px;
+	line-height: 1.1em;
+	font-weight: 100;
+	color: #888;
+	font-family: Helvetica, Arial, sans-serif;
+	border: 1px solid #f1f1f1;
+	border-bottom-width: 0px;
+	width: 428px;
+	overflow: hidden;
+}
+dl.comments dt a:link, dl.comments dt a:visited,
+dl.comments dt a:hover, dl.comments dt a:active{
+	font-weight: 800;
+	color: #7FAC20;
+	text-decoration: none;
+	border: none;
+}
+dl.comments dd{
+	background: url(../images/comments.jpg) repeat-y left top;
+	padding: 10px;
+	margin-left: 0px;
+	margin-top: 0em;
+	margin-right: 0px;
+	margin-bottom: 1em;
+	border: 1px solid #f1f1f1;
+	border-top-width: 0px;
+	overflow: hidden;
+	width: 428px;
+}
+.commentsfooter{
+   font-size: 0.9em;
+	margin-top: 0.5em;
+	color: #888;
+}
+dl.comments dt.owner{
+	border-color: #333;
+	color: #333;
+	font-weight: bold;
+}
+
+dl.comments dd.owner{
+	border-color: #333;
+}
+dl.comments dt.owner a:link, dl.comments dt.owner a:visited,
+dl.comments dt.owner a:hover, dl.comments dt.owner a:active{
+	font-weight: 800;
+	color: #9FD728;
+	text-decoration: none;
+	border: none;
+}
+dl.comments dd.owner a:link, dl.comments dd.owner a:visited,
+dl.comments dd.owner a:hover, dl.comments dd.owner a:active{
+	color: #9FD728;
+	text-decoration: none;
+	border: none;
+}
+dl.comments dd.owner .commentsfooter{
+	color: #888;
+}
+dl.comments dt.nocomments{
+	background-image: none;
+	border: none;
+	font-size: 1em;
+	color: #222;
+}
+
+/* This is the message that displays when someone has posted a new comment */
+#commentmessage{
+	font-size: 0.9em;
+	margin: 10px 10px 10px 20px;
+	padding: 10px;
+	color: #006600;
+	background: #ECF7D4;
+}
+/* Comment and Contact Forms*/
+dl.commentform{
+   margin: 10px 10px 10px 20px;
+	font-size: 0.9em;
+}
+dl.commentform dt label{
+	margin: 0px;
+}
+dl.commentform dd{
+	margin-left: 0px;
+	margin-top: 0.5em;
+	margin-right: 0px;
+	margin-bottom: 0.5em;
+}
+.textline{
+	width: 20em;
+	padding: 2px;
+	font-family: Helvetica, Arial, sans-serif;
+	font-size: 1em;
+	border: 1px solid #888;
+}
+.textmultiline{
+	width: 30em;
+	height: 10em;
+	padding: 2px;
+	font-family: Helvetica, Arial, sans-serif;
+	font-size: 1em;
+	border: 1px solid #888;
+}
+/* These style the links page */
+.linklist{
+	float: left;
+	width: 33%;
+	font-size: 0.9em;
+}
+.linklist h4{
+	margin: 0 1em 0 0;
+}
+.linklist dl{
+	margin: 1em 1em 1em 0;
+}
+.linklist dl dt{
+	margin: 0.5em 0 0.2em 0;
+}
+.linklist dl dd{
+	margin: 0;
+}
+/* End Blog Content Styles
+/* Blog Sidebar Styles ---------------------------------------------------------- */
+/* Search Box */
+.searchbox{
+	font-size: 0.9em;
+	padding: 2px;
+	width: 140px;
+	margin-right: 10px;
+}
+.searchbutton{
+}
+/* End Blog Sidebar Styles ------------------------------------------------------ */
+#header{
+	float: right;
+	width: 245px;
+	margin:20px 0;
+	color: #999;
+}
+.mainheader{
+/*
+	height: 367px;
+	background: url(../images/headergreen.jpg) no-repeat top left; */
+}
+.altheader{/*
+	height: 90px;
+	background: url(../images/headergreenalt.jpg) no-repeat top left;*/
+
+}
+#header h2{
+	font-size: 1.8em;
+	font-weight:bold;
+	line-height: 1.1em;
+	margin:0 ;
+	
+}
+#header h2 a:link, #header h2 a:visited,
+#header h2 a:hover, #header h2 a:active{
+/*	text-indent: -5000em;
+	background-image: url(../images/headerlogo.jpg);
+	display: block;
+	height: 60px;
+	width: 245px;
+	*/text-decoration: none;
+}
+#header p{
+	font-size: 1.2em;
+	font-weight:bold;
+	line-height: 1.1em;
+}
+.datelink a{
+	color: #888;
+	border: none;
+}
+#navbar{
+	float:left;
+	width: 245px;
+}
+#navbar ul{
+	list-style: none;
+   margin: 20px 0px 60px 0;
+}
+#navbar li{
+	float: left;
+	width: 76px;
+	background: #acacac;
+	text-align: center;
+	margin: 0 3px 3px 0;
+	display: block;
+}
+#navbar li.navselected{
+	background: #666;
+}
+#navbar a{
+	font-size: 0.9em;
+	display: block;
+	width: 76px;
+	padding: 3px 0;
+	color: #FFF;
+	font-weight: 800;
+	font-family: Helvetica, Arial, sans-serif;
+	margin: 0;
+	text-decoration: none;
+	border: none;
+}
+#navbar a:hover{
+	background: #666;
+	border: none;
+}
+/* Sideboxes contain elements in the sidebar, except for the calendar */
+.sideboxes{
+	margin: 0;
+}
+.sideboxes h4{
+	font-size: 1.4em;
+	color: #acacac;
+	font-weight: 800;
+	font-family: Helvetica, Arial, sans-serif;
+	margin: 0.2em 0 0.5em 0;
+	padding-top: 0.5em;
+	background: url(../images/sidebarheader.gif) no-repeat top left;
+}
+.sideboxes ul{
+	list-style-type: none;
+	margin-left: 0;
+	margin-top: 0;
+}
+.sideboxes ul li{
+	display: block;
+	padding: 2px;
+	margin: 3px 0 3px 0;
+}
+.sideboxes ul li:hover{
+}
+.sideboxes a:link{
+   color: #000;
+	/*color: #666666;*/
+}
+.recentposts a:link{
+	color: #7FAC20;
+	font-weight:bold;
+}
+.sideboxes a:hover, .sideboxes a:visited{
+	color: #666;
+}
+.recentposts a:hover, .recentposts a:visited{
+	color: #7FAC20;
+	font-weight:bold;
+}
+.rss, .atom{
+   font-size: 0.9em;
+	text-align: left;
+	margin: 9px 9px 0 0;
+}
+.atom
+{
+	display:inline;
+	line-height: 16px;
+}
+.rss {
+	display:inline;
+	line-height: 16px;
+	background: url(../images/rss.gif) no-repeat left center;
+}
+.rss a{
+	padding-left: 20px;
+	text-align: right;
+}
+.commentslink{
+	background: url(../images/comment.gif) no-repeat left center;
+	padding-left: 20px;
+	float: right;
+}
+.filedunder{
+	padding-left: 20px;
+	float: left;
+	background: url(../images/tag.gif) no-repeat left center;
+}
+.attachment{
+	padding-left: 20px;
+	background: url(../images/attachment.gif) no-repeat left center;
+	display:block;
+}
+.hiddentext{
+	display: none;
+}
+/* Hacks */
+/* Self Clearing Floated Elements - see
+   http://www.positioniseverything.net/easyclearing.html
+*/
+.clearfix:after {
+    content: "."; 
+    display: block; 
+    height: 0; 
+    clear: both; 
+    visibility: hidden;
+}
+
+/* Hides from IE-mac \*/
+* html .clearfix {height: 1%;}
+/* End hide from IE-mac */
+
+.owner{
+	background-color: Olive;
+}
+.floatright{
+	float:right;
+}
+.clearleft{
+	clear:left;
+}
+.clearright{
+	clear:right;
+}
+.contentp{
+	margin-left: 20px;
+}
+.smaller{
+	font-size: 0.9em;
+}
+#container{
+	width: 235px;
+}
+#container h4{
+	font-size: 1.4em;
+	color: #acacac;
+	font-weight: 800;
+	font-family: Helvetica, Arial, sans-serif;
+	margin: 0.2em 0 0.5em 0;
+	padding-top: 0.5em;
+	background: url(../images/sidebarheader.gif) no-repeat top left;
+}
+#container dl{
+	color: #555
+}
+#container dt{
+	font-weight: 800;
+}
+#container dt a:link, #container dt a:visited, #container dt a:hover, #container dt a:active{
+	color: #7FAC20;
+	border: none;
+	text-decoration: none;
+}
+#container dd{
+	margin: 0em 1em 1em 0;
+}
+
+.souplogabout{
+   background: #f1f0e5 url(../images/ownerbackground.jpg) no-repeat top left;
+	color: #FFF;
+	width: 235px;
+	clear:left;
+}
+.rightsideboxes{
+	margin: 0;
+	/*
+	width: 245px;
+	text-align: left;
+	clear: right;
+	float: right;*/
+}
+.rightsideboxes h4{
+	font-size: 1.4em;
+	color: #acacac;
+	font-weight: 800;
+	font-family: Helvetica, Arial, sans-serif;
+	margin: 0.2em 10px 0.5em 0;
+	padding-top: 0.5em;
+	background: url(../images/sidebarheader.gif) no-repeat top left;
+}
+.rightsideboxes ul{
+	list-style-type: none;
+	margin-left: 0;
+	margin-top: 0;
+}
+.rightsideboxes ul li{
+	display: block;
+	padding: 2px;
+	margin: 3px 0 3px 0;
+}
+.rightsideboxes ul li:hover{
+}
+.rightsideboxes a:link{
+	color: #000;
+}
+.rightsideboxes a:visited{
+	color: #666;
+}
+.rightsideboxes a:hover{
+	color:#666;
+}
+
+.recentposts ul{
+
+}
+.recentposts li{
+	padding-bottom: 2em;}
+ul.inline{
+	display:inline;
+}
+ul.inline li{
+	display:inline;
+	float:left;
+}
+.inline li a{
+	margin-right: 1em;
+}
+.dellink{
+	font-size: 0.8em;
+}
+.dellink a:link, .dellink a:visited, .dellink a:hover, .dellink a:active{
+}
+.customfooterright{
+        text-align: right;
+        float: right;
+		  color: #000;
+
+}
+.customfooterright ul {
+        margin: 0;
+        padding: 0;
+        list-style: none;
+}
+
+.customfooterright li {
+        display: inline;
+        margin: 0;
+        padding: 0 0 0 10px;
+}
+.customfooterright a:link, .customfooterright a:visited, 
+.customfooterright a:hover, .customfooterright a:active{
+        color:#000;
+}
+.CommonSinglePager{
+	margin: 10px 10px 10px 20px;
+}
+dl.mostcomments dt{
+   font-weight: 800;
+}
+dl.mostcomments dt a:link, dl.mostcomments a:visited,
+dl.mostcomments dt a:hover, dl.mostcomments dt a:active{
+	color: #7FAC20;
+	border: none;
+	text-decoration: none;
+}
+dl.mostcomments dd{
+	color: #666;
+	font-size: 0.9em;
+	margin: 0em 1em 1em 0;
+}
+dl.mostcomments dd  a:link, dl.mostcomments dd  a:visited,
+dl.mostcomments dd  a:hover, dl.mostcomments dd  a:active{
+	color: #666;
+	text-decoration: none;
+}
+.commentcount{
+	background: url(../images/comment.gif) no-repeat left center;
+	padding-left: 18px;
+	line-height: 16px;
+}
+.addresslist{
+	list-style : none;
+	margin : 0px 0px 10px 20px;
+	padding : 0px;
+	font-size: 1em;
+}
+.intro{
+font-size: 1.6em;
+line-height: 1.5em;
+margin: 0;
+	
+}
+.subintro{
+color: #666;
+font-size: 1.1em;
+line-height: 1.5em;
+
+}
+#commentmessage{
+	padding: 10px 10px 10px 38px;
+	font: 0.9em bold Tahoma, Arial, Helvetica;
+	color: #334433;
+	margin: 5px 10px 10px 20px;
+   background: #cfe7c0 url(../../../default/images/status-green.gif) no-repeat 5px center;
+} 
+/* tag Styles */
+
+.souptagcloud
+{
+	line-height: 200%;
+	padding:0 10px;
+	margin: 0px;
+	margin-bottom:1em;
+	list-style-type: none;
+}
+
+ul.souptagcloud li{
+	display: inline;
+	padding: 2px;
+	margin: 3px 0 3px 0;
+}
+
+.souptagcloudlarge
+{
+	line-height: 200%;
+	margin:20px;
+	padding: 0px;
+	text-align: left;
+	list-style-type: none;
+}
+.souptagcloud a{
+	margin: 0 2px;
+	text-decoration:none;
+}
+.souptagcloudlarge a{
+	margin: 0 2px;
+}
+.souptagcloud a:hover, .souptagcloudlarge a:hover{
+	background-color: #DDD;
+}
+
+.souptag1, .souptag2, .souptag3, .souptag4, .souptag5, .souptag6 
+{
+	margin: 0px;
+	padding: 0px;
+	display: inline;
+}
+
+.souptag1 a:link, .souptag1 a:visited, .souptag1 a:active
+{
+   color: #999;
+	font-size: 1.6em;
+	font-weight: 900;
+}
+
+.souptag2 a:link, .souptag2 a:visited, .souptag2 a:active
+{
+color: #999;
+font-size:1.4em;
+font-weight: 800;
+}
+
+.souptag3 a:link, .souptag3 a:visited, .souptag3 a:active
+{
+color: #777;
+font-size:1.3em;
+font-weight: 600;
+}
+
+.souptag4 a:link, .souptag4 a:visited, .souptag4 a:active
+{
+color: #777;
+font-size:1.1em;
+font-weight: 400;
+}
+
+.souptag5 a:link, .souptag5 a:visited, .souptag5 a:active
+{
+color: #555;
+font-size:1em;
+font-weight: 200;
+}
+
+.souptag6 a:link, .souptag6 a:visited, .souptag6 a:active
+{
+color: #555;
+font-size:0.9em;
+font-weight: 100;
+}
+
+/* End tag Styles */
+.clearleft{
+	clear: left;
+}
+.breadcrumb{
+font-weight: 400; 
+font-size:1.1em;
+
+margin: 5px 20px;
+
+}
+.aboutauthor{
+	margin: 0 20px 20px 20px
+}
+.sidebarleft{
+	width: 235px;
+	float:left;
+}
+.sidebarright{
+	width: 245px;
+	float:right;
+}
+
+/* Inline tag editor */
+.InlineTagEditor
+{
+	padding: 4px;
+	border: solid 1px #999999;
+	background-color: #f3f3f3;
+}
+
+.TextButton
+{
+	display: inline-table;
+	display: -moz-inline-box;
+	display: inline-block;
+	margin: 1px;
+	padding: 4px;
+	border-style: solid;
+	border-width: 1px;
+	border-color: #999999;
+	border-top-color: #cccccc;
+	border-left-color: #cccccc;
+	background-color: #eeeeee;
+	color: #333333;
+	font-family: Tahoma, Arial, Helvetica;
+	font-size: 80%;
+	font-weight: bold;
+	white-space: nowrap;
+}
+
+.TextButton:LINK
+{
+	text-decoration: none;
+	color: #333333;
+	background-color: #eeeeee;
+}
+
+.TextButton:VISITED
+{
+	text-decoration: none;
+	color: #333333;
+	background-color: #eeeeee;
+}
+
+.TextButton:ACTIVE
+{
+	text-decoration: none;
+	color: #333333;
+}
+
+.TextButton:HOVER
+{
+	text-decoration: underline;
+	color: #333333;
+	background-color: #dddddd;
+}
+
+/* Modal Styles */
+
+.ModalMask
+{
+	opacity: .4;
+	filter: alpha(opacity=40);
+	background-color: #333333;
+}
+
+.Modal
+{
+	border-style: solid;
+	border-width: 1px;
+	border-color: #888888;
+	border-right-width: 3px;
+	border-right-color: #888888;
+	border-bottom-width: 3px;
+	border-bottom-color: #888888;
+	background-color: #eeeeee;
+}
+
+.ModalTitle
+{
+	font-family: Tahoma, Arial, Helvetica;
+	height: 18px;
+	font-size: 16px;
+	padding: 5px;
+	padding-bottom: 7px;
+	border-style: solid;
+	border-width: 0px;
+	border-bottom-width: 1px;
+	border-color: #cccccc;
+	background-color: #dddddd;
+	color: #000000;
+	font-weight: bold;
+	cursor: move;
+	overflow: hidden;
+	text-align: left;
+}
+
+.ModalClose
+{
+	width: 33px;
+	height: 12px;
+	background-image: url(../../../default/images/common/close.gif);
+	background-repeat: no-repeat;
+	overflow: hidden;
+	cursor: pointer;
+	float: right;
+}
+
+.ModalContent
+{
+	background-color: #ffffff;
+}
+
+.ModalFooter
+{
+	border-style: solid;
+	border-width: 0px;
+	border-top-width: 1px;
+	border-color: #cccccc;
+	background-color: #eeeeee;
+	padding: 2px;
+}
+
+.ModalResize
+{
+	width: 14px;
+	height: 14px;
+	background-image: url(../../../default/images/common/resize.gif);
+	background-repeat: no-repeat;
+	overflow: hidden;
+	float: right;
+	cursor: se-resize;
+}
+
+/* Subscription Styles */
+.BlogSubNotification
+{
+	color: #FF0000;
+	font-size: 80%;
+}
+
+.SubscriptionButton
+{
+	margin-left: 0px;
+}

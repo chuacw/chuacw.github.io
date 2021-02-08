@@ -1,0 +1,12 @@
+
+body {
+	background-color: #FFF;
+}
+a:link,a:hover, a:visited, a:active{color:#777;}
+
+#header{
+	background-color: #333; 
+}
+
+#container{
+}

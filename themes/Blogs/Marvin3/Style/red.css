@@ -1,0 +1,77 @@
+/*  "Red" variant of "Marvin3" skin for CS 1.0.*/
+
+a:visited,
+a:active,
+a:link {
+	color : #C00;
+}
+
+h1 a:visited,
+h1 a:active,
+h1 a:link {
+	color : #000;
+}
+
+h1 a:hover {
+	color : #C00;
+	text-decoration : none;
+}
+/*Blog Header*/	
+#header{
+    background-color : #FDA;
+	border-bottom : 4px solid #C00;
+}
+
+
+  
+#content {
+	border-bottom : 4px solid #C00;
+}
+	
+
+.altcomment{
+	background-color: #FFFFFF;
+	}
+	
+.CalendarOtherMonth{
+}
+
+#masthead {
+	color: #333;
+	background: #FDA;
+}
+#masthead a:link, #masthead a:visited, #masthead a:active, #masthead a:hover {
+	color: #C00;
+}
+
+/* Tag Styles */
+
+.Tag1 a:link, .Tag1 a:visited, .Tag1 a:active
+{
+	color: #700;
+}
+
+.Tag2 a:link, .Tag2 a:visited, .Tag2 a:active
+{
+	color: #800;
+}
+
+.Tag3 a:link, .Tag3 a:visited, .Tag3 a:active
+{
+	color: #900;
+}
+
+.Tag4 a:link, .Tag4 a:visited, .Tag4 a:active
+{
+	color: #A00;
+}
+
+.Tag5 a:link, .Tag5 a:visited, .Tag5 a:active
+{
+	color: #B00;
+}
+
+.Tag6 a:link, .Tag6 a:visited, .Tag6 a:active
+{
+	color: #C00;
+}

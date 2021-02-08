@@ -1,0 +1,359 @@
+﻿/* Wiki Rating Control */
+
+.WikiCurrentRating
+{
+    float: right;
+    font-size: 12px;
+    font-weight: normal;
+    color: #999;
+}
+
+.WikiCurrentRating img
+{
+	vertical-align: middle;
+	margin: -3px 4px;
+}
+
+.WikiRatingForm
+{
+	font-size: .8em;
+    color: #999;
+    background-color: #eee;
+}
+
+.WikiRatingFormActive
+{
+    font-size: .8em;
+    color: #999;
+    background-color: #eee;
+}
+
+.WikiRating img, .WikiRatingActive img
+{
+    float: left;
+    margin-right: .5em;
+}
+
+.WikiRatingGood
+{
+    font-weight: bold;
+}
+
+.WikiRatingBad
+{
+    font-weight: bold;
+}
+
+.WikiRatingButtons
+{
+	clear: both;
+    margin-top: 5px;
+    line-height: 2.0em;
+    float: left;
+}
+
+.WikiRatingButtonsDescription 
+{
+    float: left;
+}
+
+.WikiRatingYes
+{
+	display: block;
+	margin-left: .5em;
+	width: 38px;
+	height: 0;
+	padding: 15px 0 5px 0;
+	overflow: hidden;
+	background-image: url(../../../utility/images/voteyes.png);
+	background-repeat: no-repeat;
+	float: left;
+}
+
+.WikiRatingYes:HOVER
+{
+	background-image: url(../../../utility/images/voteyes_hover.png);
+}
+
+.WikiRatingNo
+{
+	display: block;
+	margin-left: .5em;
+	width: 38px;
+	height: 0;
+	padding: 15px 0 5px 0;
+	overflow: hidden;
+	background-image: url(../../../utility/images/voteno.png);
+	background-repeat: no-repeat;	
+	float: left;
+}
+
+.WikiRatingNo:HOVER
+{
+	background-image: url(../../../utility/images/voteno_hover.png);
+}
+
+/* Small Wiki Rating Control */
+
+.WikiCurrentRatingSmall
+{
+    font-size: .8em;
+    color: #666;
+    margin-top: .6em;
+}
+
+.WikiRatingFormSmall
+{
+	float: left;
+	font-size: .8em;
+	color: #666;
+}
+
+.WikiRatingFormActiveSmall
+{
+	float: left;
+	font-size: .8em;
+    color: #fff;
+}
+
+.WikiRatingSmall img, .WikiRatingActiveSmall img
+{
+	margin-right: .5em;
+    float: left;
+}
+
+.WikiRatingGoodSmall
+{
+    font-weight: bold;
+}
+
+.WikiRatingBadSmall
+{
+    font-weight: bold;
+}
+
+.WikiRatingButtonsSmall
+{
+	clear: both;
+}
+
+.WikiRatingButtonsSmall img, .WikiRatingButtonsSmall img
+{
+    float: none;
+    cursor: pointer;
+    vertical-align: middle;
+}
+
+.WikiRatingYesSmall
+{
+	display: inline-block;
+	margin: 0 .5em;
+	overflow: hidden;
+}
+
+.WikiRatingNoSmall
+{
+	display: inline-block;
+	margin: 0 .5em;
+	overflow: hidden;
+}
+
+/* Wiki Comments */
+
+.WikiCommentArea
+{
+	margin: 12px 0;
+}
+
+.WikiCommentUser
+{
+	float: left;
+	width: 64px;
+	min-height: 60px;
+	overflow: hidden;
+}
+
+.WikiCommentArrow
+{
+	padding: 0;
+	height: 10px;
+	overflow: hidden;
+	margin-left: 10px;
+}
+
+.WikiCommentArrow .r1, .WikiCommentArrow .r2, .WikiCommentArrow .r3, .WikiCommentArrow .r4,
+.WikiCommentArrow .r5, .WikiCommentArrow .r6, .WikiCommentArrow .r7, .WikiCommentArrow .r8, 
+.WikiCommentArrow .r9, .WikiCommentArrow .r10
+{
+	height: 1px;
+	overflow: hidden;
+}
+
+.WikiCommentArrow .r1 { width: 18px; }
+.WikiCommentArrow .r2 { width: 16px; }
+.WikiCommentArrow .r3 { width: 14px; }
+.WikiCommentArrow .r4 { width: 12px; }
+.WikiCommentArrow .r5 { width: 10px; }
+.WikiCommentArrow .r6 { width: 8px; }
+.WikiCommentArrow .r7 { width: 6px; }
+.WikiCommentArrow .r8 { width: 4px; }
+.WikiCommentArrow .r9 { width: 2px; }
+.WikiCommentArrow .r10 { width: 0; }
+
+.WikiCommentBubble
+{
+}
+
+.WikiCommentContent
+{
+	padding: 0 10px 0 10px;
+	position: relative;
+	overflow: hidden;
+}
+
+.WikiCommentContent p
+{
+	margin: 4px 0px;
+}
+
+.WikiCommentBubbleRoundTop, .WikiCommentBubbleRoundBottom
+{
+	height: 5px;
+}
+
+.WikiCommentBubbleRoundTop .r1, .WikiCommentBubbleRoundTop .r2, .WikiCommentBubbleRoundTop .r3, .WikiCommentBubbleRoundTop .r4,
+.WikiCommentBubbleRoundBottom .r1, .WikiCommentBubbleRoundBottom .r2, .WikiCommentBubbleRoundBottom .r3, .WikiCommentBubbleRoundBottom .r4
+{
+	height: 1px;
+	overflow: hidden;
+}
+
+.WikiCommentBubbleRoundTop .r1, .WikiCommentBubbleRoundBottom .r4 { margin: 0 5px; }
+.WikiCommentBubbleRoundTop .r2, .WikiCommentBubbleRoundBottom .r3 { margin: 0 3px; }
+.WikiCommentBubbleRoundTop .r3, .WikiCommentBubbleRoundBottom .r2 { margin: 0 2px; }
+.WikiCommentBubbleRoundTop .r4, .WikiCommentBubbleRoundBottom .r1 { margin: 0 1px; height: 2px; }
+
+.WikiCommentBubbleRoundTop .r1, .WikiCommentBubbleRoundTop .r2, .WikiCommentBubbleRoundTop .r3, .WikiCommentBubbleRoundTop .r4,
+.WikiCommentBubbleRoundBottom .r1, .WikiCommentBubbleRoundBottom .r2, .WikiCommentBubbleRoundBottom .r3, .WikiCommentBubbleRoundBottom .r4,
+.WikiCommentArrow .r1, .WikiCommentArrow .r2, .WikiCommentArrow .r3, .WikiCommentArrow .r4,
+.WikiCommentArrow .r5, .WikiCommentArrow .r6, .WikiCommentArrow .r7, .WikiCommentArrow .r8, 
+.WikiCommentArrow .r9, .WikiCommentArrow .r10,
+.WikiCommentContent
+{
+	background-color: #CEDEFD;
+}
+
+.WikiCommentHeader
+{
+	margin: 0 0 16px 40px;
+	font-size: 80%;
+	font-weight: bold;
+	color: #666;
+}
+
+.WikiCommentHeaderIcon
+{
+	float: left;
+	margin-top: 4px;
+	margin-bottom: 8px;
+}
+
+/* Questionable */
+
+.CommonWikiPageRatingArea
+{
+	float: left;
+	width: 50px;
+	margin: 8px 4px 16px 0;
+	overflow: hidden;
+	font-size: 140%;
+	text-align: center;
+	font-weight: bold;
+	color: #888;
+}
+
+.CommonWikiPageNoRatingArea
+{
+	float: left;
+	width: 50px;
+	margin: 8px 4px 16px 0;
+	overflow: hidden;
+	font-size: 100%;
+	text-align: center;
+	color: #999;
+}
+
+.CommonWikiListArea
+{
+	font-size: 110%;
+	float: left;
+	width: 300px;
+	margin: 8px;
+	overflow: hidden;
+}
+
+.CommonWikiPageListArea
+{
+	font-size: 110%;
+	padding: 8px 8px 8px 12px;
+	overflow: hidden;
+}
+
+.CommonWikiPageListArea .CommonHeader
+{
+	margin-top: 0;
+}
+
+.CommonWikiPageDescription
+{
+	font-size: 90%;
+	color: #777;
+}
+
+.WikiSidebarPlaceholder
+{
+    background-color: transparent;
+    padding: 12px;
+    margin: 0 0 12px 0;
+    height: 1%;
+}
+
+.WikiAddButton
+{
+    background-image: url(../images/wiki/add-button-left.png);
+    background-position: top left;
+    background-repeat: no-repeat;
+    padding-left: 22px;
+    text-align: left;
+    cursor: pointer;
+    display: inline-table;
+    display: -moz-inline-box;
+    display: inline-block;
+}
+
+a.WikiAddButton:hover
+{
+    text-decoration: none;
+}
+
+.WikiAddButton span
+{
+    background-image: url(../images/wiki/add-button-right.png);
+    background-position: top right;
+    background-repeat: no-repeat;    
+    color: #fff; 
+    font-size: 12px;
+    font-weight: bold;
+    line-height: 24px;
+    text-align: center;
+    padding: 0;
+    margin: 0;
+    padding-left: 5px;
+    padding-right: 10px;
+    max-width: 375px;
+    display: block;
+}
+
+
+
+

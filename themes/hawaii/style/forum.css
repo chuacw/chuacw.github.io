@@ -1,0 +1,755 @@
+/*
+List Styles
+*/
+
+.ForumSubListCellLeftMost
+{
+	padding: 2px;
+	text-align: left;
+}
+
+.ForumLastPost
+{
+	font-size: 90%;
+}
+
+.ForumSubListCell
+{
+	padding: 2px;
+}
+
+.ForumSubListCellPager
+{
+	padding: 2px;
+	font-size: 90%;
+	text-align: right;
+}
+
+.CommonCommentContent
+{
+	padding-bottom: 5px;
+}
+
+/*
+Styles within Lists
+*/
+
+A.ForumGroupNameRead, .ForumGroupNameRead:LINK, .ForumGroupNameRead:VISITED
+{
+    color: #039;
+}
+
+A.ForumGroupNameUnRead, .ForumGroupNameUnRead:LINK, .ForumGroupNameUnRead:VISITED
+{
+    color: #36c;
+}
+
+A.ForumNameRead, .ForumNameRead:LINK, .ForumNameRead:VISITED
+{
+	color: #888;
+	font-weight: bold;
+}
+
+A.ForumNameUnRead, .ForumNameUnRead:LINK, .ForumNameUnRead:VISITED
+{
+	color: #36c;
+	font-weight: bold;
+}
+
+/*
+Post Styles
+*/
+
+UL.ForumPostList
+{
+	margin: 0;
+	padding: 0;
+	list-style-type: none;
+}
+
+.ForumPostArea
+{
+	margin: 12px 0;
+}
+
+.ForumPostHeader
+{
+	padding: 6px 6px 6px 8px;
+    border: solid 1px #E1E1E1;
+	border-bottom-width: 0;
+	background-color: #ccc;
+	font-size: 90%;
+	font-weight: normal;
+	margin: 0px;
+	color: #000;
+}
+
+.ForumPostHeaderAnswered
+{
+	padding: 6px 6px 6px 8px;
+    border: solid 1px #E1E1E1;
+	border-bottom-width: 0;
+	background-color: #CCEFCC;
+	font-size: 90%;
+	font-weight: normal;
+	margin: 0px;
+	color: #000;
+}
+
+.ForumPostTitleArea
+{
+	background-color: #f4f4f4;	
+	border: solid 0 #E1E1E1;
+	border-top-width: 1px;
+	border-bottom-width: 1px;
+	padding: 4px;
+}
+
+.ForumPostTitle
+{
+	font-size: 100%;
+	font-weight: normal;
+	color: #666;
+	float: left;
+	margin: 4px 10px 4px 0;
+	width: 100%;
+	border-bottom: solid 1px #DEE9FE;
+	padding-top: 6px;
+	padding-bottom: 0;
+}
+
+.ForumPostTitleInner 
+{
+    padding-bottom: 5px;
+}
+
+.Verified .ForumPostTitle
+{
+   	border-bottom: solid 1px #CCFFCC; 
+}
+
+.Suggested .ForumPostTitle
+{
+   	border-bottom: solid 1px #FEF573; 
+}
+
+.ForumPostFooter
+{
+	border-top: solid 1px #DEE9FE;
+}
+
+.Verified .ForumPostFooter
+{
+	border-top: solid 1px #CCFFCC;    
+}
+
+.Suggested .ForumPostFooter
+{
+	border-top: solid 1px #FEF573;    
+}
+
+.ForumThreadStarterSidebar 
+{
+    float: right; 
+    width:150px; 
+    margin: 12px 2px 0 0;
+}
+
+.ForumThreadStarterSidebar .CommonTextButton 
+{
+    padding: 2px;
+}
+
+.ForumThreadStarterSidebar .CommonTextButtonHighlight
+{
+    padding: 2px;
+}
+
+.ForumPostVerifiedBySection 
+{
+    float: right;
+    background-color: #CCFFCC;
+    color: #666;
+    padding: 5px;
+    clear: right;
+    margin-bottom: 0;
+    font-size: 90%;
+}
+
+.ForumPostSuggestedBySection 
+{
+    float: right;
+    background-color: #FEF573;
+    color: #666;
+    padding: 5px;
+    clear: right;
+    margin-bottom: 0;
+    font-size: 90%;
+}
+
+.ForumPostTitleDate
+{
+    font-size: 80%;
+}
+
+.ReplyButton, .MoreButton, .AnswerButton, .NotAnswerButton, .SuggestAnswerButton
+{
+    background-image: url(../images/Common/forum_replybutton_left.png);
+    background-position: top left;
+    background-repeat: no-repeat;
+    padding-left: 8px;
+    text-align: left;
+    cursor: pointer;
+    display: inline-table;
+    display: -moz-inline-box;
+    display: inline-block;
+}
+
+.AnswerButton
+{
+    background-image: url(../images/Common/forum_answerbutton_left.png);
+}
+
+.NotAnswerButton
+{
+    background-image: url(../images/Common/forum_notanswerbutton_left.png);
+}
+
+.SuggestAnswerButton
+{
+    background-image: url(../images/Common/forum_suggestanswerbutton_left.png);
+}
+
+a.MoreButton:hover, a.ReplyButton:hover, a.AnswerButton:hover, a.NotAnswerButton:hover, a.SuggestAnswerButton:hover
+{
+    text-decoration: none;
+}
+
+.ReplyButton span, .MoreButton span, .AnswerButton span, .NotAnswerButton span, .SuggestAnswerButton span
+{
+    background-image: url(../images/Common/forum_replybutton_right.png);
+    background-position: top right;
+    background-repeat: no-repeat;    
+    color: #fff; 
+    font-size: 11px;
+    font-weight: bold;    
+    line-height: 17px;
+    text-align: center;
+    padding: 0;
+    margin: 0;
+    padding-left: 0;
+    padding-right: 8px;
+    max-width: 375px;
+    display: block;
+}
+
+.MoreButton span
+{
+    background-image: url(../images/Common/forum_replybutton_right_down.png);
+    padding-right: 20px;
+}
+
+.AnswerButton span
+{
+    background-image: url(../images/Common/forum_answerbutton_right.png);
+}
+
+.NotAnswerButton span
+{
+    background-image: url(../images/Common/forum_notanswerbutton_right.png);
+}
+
+.SuggestAnswerButton span
+{
+    background-image: url(../images/Common/forum_suggestanswerbutton_right.png);
+}
+
+.ForumPostBodyArea
+{
+	width: 100%;
+	vertical-align: top;
+	overflow: hidden;
+}
+
+.ForumPostContentArea
+{
+	border: solid 0 #E1E1E1;
+	border-right-width: 1px;
+	color: #000;
+}
+
+.ForumPostUserArea
+{
+	width: 200px;
+	background-color: #f4f4f4;
+	padding: 4px;
+	text-align: center;
+	border: solid 1px #E1E1E1;
+}
+
+.ForumPostUserContent
+{
+	width: 190px;
+	overflow: hidden;
+}
+
+.ForumPostFooterArea
+{
+	border: solid 1px #E1E1E1;
+	border-top-width: 0;
+	border-left-width: 0;
+	padding: 4px;
+	line-height: 20px;
+	vertical-align: bottom;	
+}
+
+.ForumPostContentText
+{
+	font-size: 100%;
+	text-align: left;
+	padding: 8px;
+	margin-bottom: 20px;
+}
+
+.ForumPostSignature
+{
+    margin: 1em 8px 8px 8px;
+    border: solid 0 #ddd;
+    border-top-width: 1px;
+    padding: 1em 0 20px 0;
+    font-size: 90%;
+    text-align: left;
+}
+
+.ForumPostUserName
+{
+	margin: 4px 0 0 0;
+	padding: 0 0 4px 4px;
+	font-weight: bold;
+	font-size: 150%;
+	color: #666;
+}
+
+.ForumPostUserName a:link, .ForumPostUserName a:active, .ForumPostUserName a:visited, .ForumPostUserName a:hover
+{
+	margin: 0;
+	color: #666;
+	text-decoration: none;
+}
+
+.ForumPostUserAvatar
+{
+	padding: 4px 0 4px 4px;
+}
+
+.ForumPostRoleIcons
+{
+	padding: 4px 0;
+}
+
+.ForumPostRoleIcons img
+{
+	padding: 0 4px;
+}
+
+.ForumPostAttachment
+{
+	font-size: 90%;
+	font-weight: bold;
+	color: #333;
+	padding: 4px 4px 4px 0px;
+}
+
+.ForumPostButtons
+{
+	margin-top: 0;
+	padding-top: 2px;
+	padding-left: 4px;
+	float: right;
+}
+
+.ForumPostButtons .CommonTextButton 
+{
+    padding: 2px;
+    margin: 0;
+}
+
+.ForumPostButtons .CommonTextButtonHighlight 
+{
+    padding: 2px;
+    margin: 0;
+}
+
+.EvolutionAttachment
+{
+	font-size: 85%;
+}
+
+.EvolutionAttachmentSummary
+{
+	font-size: 90%;
+	color: #666;
+	display: inline-table;
+	display: -moz-inline-box;
+	display: inline-block;
+	background-repeat: no-repeat;
+	background-position: 2px center;
+	padding-left: 22px;
+	line-height: normal;
+	white-space: nowrap;
+}
+
+UL.ForumPostStatistics
+{
+	font-size: 90%;
+	list-style-type: none;
+	margin: 4px 8px 0 0;
+	padding: 0;
+}
+
+UL.ForumPostStatistics LI
+{
+	display: inline;
+	font-size: 90%;
+}
+
+UL.ForumPostUserPropertyList
+{
+	margin: 0;
+	padding: 0 0 0 4px;
+	list-style-type: none;	
+}
+
+UL.ForumPostUserPropertyList LI
+{
+	margin: 4px 10px 4px 2px;
+	font-size: 90%;
+}
+
+/*
+Header Definitions
+*/
+
+.ForumMyRepliesHeader
+{
+	text-align: center;
+}
+
+/* 
+Column Defitions
+*/
+
+.ForumMyImageColumn
+{
+	width: 20px;
+}
+
+.ForumMyNameColumn
+{
+	width: 85%;
+}
+
+.ForumMyRepliesColumn
+{
+	width: 15%;
+	text-align: center;
+}
+
+.ForumMyMoveColumn
+{
+	text-align: center;
+	width: 28px;
+}
+
+/*
+Quoting
+*/
+
+BLOCKQUOTE
+{
+	border: dotted 1px #ccc;
+	padding: 4px;
+	margin: 16px;
+}
+
+.ForumReplyToPostArea
+{
+	padding: 8px;
+	border: dotted 1px #ccc;
+	margin-bottom: 16px;
+	background-color: #dddddd;
+}
+
+/*
+Thread rating control in post flat view
+*/
+
+.ForumThreadRateControlReadOnly
+{
+	position: relative;
+	display: inline-table;
+	display: -moz-inline-box;
+	display: inline-block;
+	font-weight: bold;
+	line-height: normal;
+}
+
+.ForumThreadRateControlReadOnly img
+{
+	margin: auto 0;
+}
+
+.ForumThreadRateControl
+{
+	position: relative;
+	display: inline-table;
+	display: -moz-inline-box;
+	display: inline-block;
+	cursor: pointer;
+	font-weight: bold;
+	line-height: normal;
+}
+
+.ForumThreadRateControl img
+{
+	margin: auto 0;
+}
+
+.ForumThreadRateControlActive
+{
+	position: relative;
+	display: inline-table;
+	display: -moz-inline-box;
+	display: inline-block;
+	cursor: pointer;
+	font-weight: bold;
+	line-height: normal;
+}
+
+.ForumThreadRateControlActive img
+{
+	margin: auto 0;
+}
+
+/* Threaded View Styles */
+
+.ForumTreeArea
+{ 
+	border: solid 1px #ccc;
+}
+
+.ForumThreadedPostArea
+{
+    border: solid 1px #ccc;
+    border-left-width: 0;
+    background-color: #999;
+}
+
+.ForumPostTreeHeading
+{
+	border-bottom: solid 1px #ccc; 
+	font-size: 11px;
+	text-align: center;
+	background-color: #ccc;
+	color: #000;
+	background-image: none;
+	padding: 4px;
+	font-weight: normal;
+	font-size: 90%;
+	margin: 0;
+}
+
+.ForumDisplayMessage
+{
+	background-color: #ccc;
+	color: #900;
+	font-weight: bold;
+	font-size: 80%;
+	padding: 4px;
+}
+
+.ForumThreadDateArea
+{
+	font-weight: normal;
+}
+
+/* Thread Status */
+
+.Normal .CommonCommentUser, .Verified .CommonCommentUser, .Suggested .CommonCommentUser
+{
+	width: 120px;
+	overflow: hidden;
+}
+
+.Normal .CommonCommentBubble, .Verified .CommonCommentBubble, .Suggested .CommonCommentBubble
+{
+	margin-left: 130px;
+}
+
+.Editor .CommonCommentBubble
+{
+	margin-left: 10px;
+}
+
+.ThreadStarter .CommonCommentBubble
+{
+	margin-right: 160px;
+}
+
+.Normal .CommonCommentBubbleRoundTop, .Normal .CommonCommentBubbleRoundBottom,
+.Verified .CommonCommentBubbleRoundTop, .Verified .CommonCommentBubbleRoundBottom,
+.Suggested .CommonCommentBubbleRoundTop, .Suggested .CommonCommentBubbleRoundBottom
+{
+	height: 8px;
+}
+
+.Normal .CommonCommentBubbleRoundTop .r1, .Normal .CommonCommentBubbleRoundTop .r2, .Normal .CommonCommentBubbleRoundTop .r3, .Normal .CommonCommentBubbleRoundTop .r4,
+.Normal .CommonCommentBubbleRoundBottom .r1, .Normal .CommonCommentBubbleRoundBottom .r2, .Normal .CommonCommentBubbleRoundBottom .r3, .Normal .CommonCommentBubbleRoundBottom .r4,
+.Verified .CommonCommentBubbleRoundTop .r1, .Verified .CommonCommentBubbleRoundTop .r2, .Verified .CommonCommentBubbleRoundTop .r3, .Verified .CommonCommentBubbleRoundTop .r4,
+.Verified .CommonCommentBubbleRoundBottom .r1, .Verified .CommonCommentBubbleRoundBottom .r2, .Verified .CommonCommentBubbleRoundBottom .r3, .Verified .CommonCommentBubbleRoundBottom .r4,
+.Suggested .CommonCommentBubbleRoundTop .r1, .Suggested .CommonCommentBubbleRoundTop .r2, .Suggested .CommonCommentBubbleRoundTop .r3, .Suggested .CommonCommentBubbleRoundTop .r4,
+.Suggested .CommonCommentBubbleRoundBottom .r1, .Suggested .CommonCommentBubbleRoundBottom .r2, .Suggested .CommonCommentBubbleRoundBottom .r3, .Suggested .CommonCommentBubbleRoundBottom .r4
+{
+	height: 1px;
+	overflow: hidden;
+	border-left: solid 4px #CEDEFD;
+	border-right: solid 4px #CEDEFD;
+}
+
+.Normal .CommonCommentBubbleRoundTop .r1, .Normal .CommonCommentBubbleRoundBottom .r4,
+.Verified .CommonCommentBubbleRoundTop .r1, .Verified .CommonCommentBubbleRoundBottom .r4,
+.Suggested .CommonCommentBubbleRoundTop .r1, .Suggested .CommonCommentBubbleRoundBottom .r4 
+{ 
+	margin: 0 5px;
+	height: 0;
+	border-top: solid 2px #CEDEFD;
+	border-left-width: 0;
+	border-right-width: 0; 
+}
+
+.Normal .CommonCommentBubbleRoundTop .r2, .Normal .CommonCommentBubbleRoundBottom .r3,
+.Verified .CommonCommentBubbleRoundTop .r2, .Verified .CommonCommentBubbleRoundBottom .r3,
+.Suggested .CommonCommentBubbleRoundTop .r2, .Suggested .CommonCommentBubbleRoundBottom .r3
+{
+	margin: 0 3px;
+	height: 0;
+	border-top: solid 2px #CEDEFD;
+	border-left-width: 0;
+	border-right-width: 0; 
+}
+
+.Normal .CommonCommentBubbleRoundTop .r3, .Normal .CommonCommentBubbleRoundBottom .r2,
+.Verified .CommonCommentBubbleRoundTop .r3, .Verified .CommonCommentBubbleRoundBottom .r2,
+.Suggested .CommonCommentBubbleRoundTop .r3, .Suggested .CommonCommentBubbleRoundBottom .r2
+{
+	margin: 0 2px;
+	height: 2px;
+	border-left-width: 5px;
+	border-right-width: 5px;
+}
+
+.Normal .CommonCommentBubbleRoundTop .r4, .Normal .CommonCommentBubbleRoundBottom .r1,
+.Verified .CommonCommentBubbleRoundTop .r4, .Verified .CommonCommentBubbleRoundBottom .r1,
+.Suggested .CommonCommentBubbleRoundTop .r4, .Suggested .CommonCommentBubbleRoundBottom .r1
+{
+	margin: 0 1px;
+	height: 2px;
+}
+
+.Normal .CommonCommentContent,
+.Verified .CommonCommentContent,
+.Suggested .CommonCommentContent
+{
+	border-left: solid 4px #DEE9FE;
+	border-right: solid 4px #DEE9FE;
+	background-color: #fff;
+}
+
+.Normal .CommonCommentBubbleRoundTop .r1, .Normal .CommonCommentBubbleRoundTop .r2, .Normal .CommonCommentBubbleRoundTop .r3, .Normal .CommonCommentBubbleRoundTop .r4,
+.Normal .CommonCommentBubbleRoundBottom .r1, .Normal .CommonCommentBubbleRoundBottom .r2, .Normal .CommonCommentBubbleRoundBottom .r3, .Normal .CommonCommentBubbleRoundBottom .r4,
+.Normal .CommonCommentContent
+{
+	border-color: #DEE9FE;
+	background-color: #fff;
+}
+
+.Normal .CommonCommentArrow .r1, .Normal .CommonCommentArrow .r2, .Normal .CommonCommentArrow .r3, .Normal .CommonCommentArrow .r4,
+.Normal .CommonCommentArrow .r5, .Normal .CommonCommentArrow .r6, .Normal .CommonCommentArrow .r7, .Normal .CommonCommentArrow .r8, 
+.Normal .CommonCommentArrow .r9, .Normal .CommonCommentArrow .r10
+{
+	background-color: #DEE9FE;
+}
+
+.Verified .CommonCommentBubbleRoundTop .r1, .Verified .CommonCommentBubbleRoundTop .r2, .Verified .CommonCommentBubbleRoundTop .r3, .Verified .CommonCommentBubbleRoundTop .r4,
+.Verified .CommonCommentBubbleRoundBottom .r1, .Verified .CommonCommentBubbleRoundBottom .r2, .Verified .CommonCommentBubbleRoundBottom .r3, .Verified .CommonCommentBubbleRoundBottom .r4,
+.Verified .CommonCommentContent
+{
+	border-color: #ccffcc;
+	background-color: #fff;
+}
+
+.Verified .CommonCommentArrow .r1, .Verified .CommonCommentArrow .r2, .Verified .CommonCommentArrow .r3, .Verified .CommonCommentArrow .r4,
+.Verified .CommonCommentArrow .r5, .Verified .CommonCommentArrow .r6, .Verified .CommonCommentArrow .r7, .Verified .CommonCommentArrow .r8, 
+.Verified .CommonCommentArrow .r9, .Verified .CommonCommentArrow .r10
+{
+	background-color: #ccffcc;
+}
+
+.Suggested .CommonCommentBubbleRoundTop .r1, .Suggested .CommonCommentBubbleRoundTop .r2, .Suggested .CommonCommentBubbleRoundTop .r3, .Suggested .CommonCommentBubbleRoundTop .r4,
+.Suggested .CommonCommentBubbleRoundBottom .r1, .Suggested .CommonCommentBubbleRoundBottom .r2, .Suggested .CommonCommentBubbleRoundBottom .r3, .Suggested .CommonCommentBubbleRoundBottom .r4,
+.Suggested .CommonCommentContent
+{
+	border-color: #FEF573;
+	background-color: #fff;
+}
+
+.Suggested .CommonCommentArrow .r1, .Suggested .CommonCommentArrow .r2, .Suggested .CommonCommentArrow .r3, .Suggested .CommonCommentArrow .r4,
+.Suggested .CommonCommentArrow .r5, .Suggested .CommonCommentArrow .r6, .Suggested .CommonCommentArrow .r7, .Suggested .CommonCommentArrow .r8, 
+.Suggested .CommonCommentArrow .r9, .Suggested .CommonCommentArrow .r10
+{
+	background-color: #FEF573;
+}
+
+.Verified.Top .CommonCommentBubbleRoundTop .r1, .Verified.Top .CommonCommentBubbleRoundTop .r2, .Verified.Top .CommonCommentBubbleRoundTop .r3, .Verified.Top .CommonCommentBubbleRoundTop .r4,
+.Verified.Top .CommonCommentBubbleRoundBottom .r1, .Verified.Top .CommonCommentBubbleRoundBottom .r2, .Verified.Top .CommonCommentBubbleRoundBottom .r3, .Verified.Top .CommonCommentBubbleRoundBottom .r4,
+.Verified.Top .CommonCommentArrow .r1, .Verified.Top .CommonCommentArrow .r2, .Verified.Top .CommonCommentArrow .r3, .Verified.Top .CommonCommentArrow .r4,
+.Verified.Top .CommonCommentArrow .r5, .Verified.Top .CommonCommentArrow .r6, .Verified.Top .CommonCommentArrow .r7, .Verified.Top .CommonCommentArrow .r8, 
+.Verified.Top .CommonCommentArrow .r9, .Verified.Top .CommonCommentArrow .r10,
+.Verified.Top .CommonCommentContent
+{
+	background-color: #ffffff;
+	border-left-width: 0;
+	border-right-width: 0;
+}
+
+/* Button Styles */
+.ActionButton
+{
+    background-image: url(../images/common/action-button-background.png);
+    background-repeat: no-repeat;
+    color: #fff;
+    padding: 1px 8px;
+    display: block;
+}
+
+A.ActionButton:link, A.ActionButton:visited, A.ActionButton:hover, A.ActionButton:active
+{
+    padding: 8px 21px;  
+    color: #fff;  
+}
+
+.ForumCreateEditPostTypeBanner
+{
+    background-image: url(../images/common/action2-banner-background.png);
+    background-repeat: no-repeat;
+    color: #fff;
+    padding: 1px 10px;
+    line-height: 32px;
+    width: 600px;
+    margin-bottom: 15px;
+}
+
+A.ForumLinkUnread, .ForumLinkUnread:LINK, .ForumLinkUnread:VISITED
+{
+    color: #36c;
+}

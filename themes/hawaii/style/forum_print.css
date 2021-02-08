@@ -1,0 +1,40 @@
+.Normal .CommonCommentContent, .Verified .CommonCommentContent, .Suggested .CommonCommentContent, .Verified.Top .CommonCommentContent
+{
+	border-width: 0;
+}
+
+.ForumPostButtons,
+.Normal .CommonCommentArrow, .Verified .CommonCommentArrow, .Suggested .CommonCommentArrow,
+.Normal .CommonCommentBubbleRoundTop, .Normal .CommonCommentBubbleRoundBottom,
+.Verified .CommonCommentBubbleRoundTop, .Verified .CommonCommentBubbleRoundBottom
+.Suggested .CommonCommentBubbleRoundTop, .Suggested .CommonCommentBubbleRoundBottom,
+.ForumPostVerifiedBySection, .ForumPostSuggestedBySection 
+{
+	display: none;
+}
+
+.Normal .CommonCommentUser, .Verified .CommonCommentUser, .Suggested .CommonCommentUser
+{
+	width: 0;
+	overflow: hidden;
+}
+
+.Normal .CommonCommentBubble, .Verified .CommonCommentBubble, .Suggested .CommonCommentBubble
+{
+	margin-left: 0;
+}
+
+.ForumThreadStarterSidebar
+{
+	display: none;
+}
+
+.ThreadStarter .CommonCommentBubble
+{
+	margin-right: 0;
+}
+
+.ForumPostHeader
+{
+	display: none;
+}
