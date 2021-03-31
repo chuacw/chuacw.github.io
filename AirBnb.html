@@ -9,8 +9,11 @@
                 if (!zilPay.wallet.isConnect) {     
                     console.log("Calling connect")
                     const connected = await zilPay.wallet.connect()
+                    console.log(`Connected: ${connected}`)
+                } else {
+                    console.log("Already connected")
                 }
-                console.log(`Connected: ${connected}`)            
+                            
             } else {
                 console.log("zilPay not defined")
             }
