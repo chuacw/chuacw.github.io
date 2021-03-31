@@ -1,0 +1,31 @@
+<html>
+    <head>
+        <script type="text/javascript">
+        async function ensureZilPay() {
+            console.log("Checking zilpay")
+            if (typeof window.zilPay !== 'undefined') {
+                console.log("Calling zilPay") 
+                let zilPay = window.zilPay
+                console.log("Calling connect")
+                await zilPay.wallet.connect()
+                console.log('zilPay connected.')            
+            } else {
+                console.log("zilPay not defined")
+            }
+        }
+
+        async function rentHouse() {
+            await ensureZilPay()
+        }
+
+        async function registerHouse() {
+            await ensureZilPay()
+        }
+        </script>
+    </head>
+    <body>
+        <div><button onclick="rentHouse()">Rent</button>
+        </div>
+        <div><button onclick="registerHouse()">Register</button></div>
+    </body>
+</html>
