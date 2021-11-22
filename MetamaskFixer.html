@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+ <html>
+ <script defer src="https://cdn.jsdelivr.net/npm/web3@1.3.3/dist/web3.min.js"></script>
+ <body>
+ 
+ <p id="demo">Click the button to change the text in this paragraph.</p>
+ 
+ <button onclick="myFunction()">Try it</button>
+ <button onclick="connectWallet()">Connect wallet</button>
+ <button onclick="addOrSwitch()">Switch network</button>
+ <script>
+ function myFunction() {
+   document.getElementById("demo").innerHTML = "Hello World";
+ }
+ async function connectWallet() {
+   await window.ethereum.request({
+     method: "wallet_requestPermissions",
+     params: [
+       {
+         eth_accounts: {}
+       }
+     ]
+   });
+   console.log("Wallet connected.");
+ }
+ async function addOrSwitch() {
+ 	console.log("Switching...");
+       try {
+         let x = await ethereum.request({
+           method: 'wallet_addEthereumChain',
+           params: [{
+             chainId: '0x38',
+             chainName: 'Binance Smart Chain',
+             nativeCurrency:
+                 {
+                     name: 'BNB',
+                     symbol: 'BNB',
+                     decimals: 18
+                 },
+             rpcUrls: ['https://bsc-dataseed.binance.org/'],
+             blockExplorerUrls: ['https://bscscan.com/'] }],
+         });
+         console.log("Switch successful");
+         console.log(x);
+       } catch (addError) {
+         // handle "add" error
+         console.error(addError);
+       }
+ 
+ }
+ </script>
+ 
+ </body>
+ </html>
