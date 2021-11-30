@@ -3,7 +3,7 @@
 <script defer src="https://cdn.jsdelivr.net/npm/web3@1.3.3/dist/web3.min.js"></script>
 <script>
     // needs to run off a webserver (localhost etc), not as a file url
-    window.addEventListener('load', function (event) {
+    window.addEventListener('load', async function (event) {
         if (typeof web3 !== 'undefined') {
             debugger;
             console.log('Web3 Detected! ' + web3.currentProvider.constructor.name)
@@ -14,7 +14,7 @@
             var registryCreationBlock = 2468384;
             var registry = new web3.eth.Contract(registryABI, registryAddress);
 
-            var totalSignatures = registry.methods.totalSignatures.call();
+            var totalSignatures = await registry.methods.totalSignatures().call();
 
             console.log("totalSignatures: " + totalSignatures);
 
