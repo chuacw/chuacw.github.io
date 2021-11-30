@@ -26,7 +26,9 @@
             // });
             debugger;
             registeredEvent.on("data", function(event) {
-                console.log(event); // same results as the optional callback above
+                let hash = event.returnValues.signature.slice(0, 10);
+                let method = event.returnValues.method;
+                console.log(`${hash}, method: "${method}"`); // same results as the optional callback above
             })
         }
     })
