@@ -20,15 +20,11 @@
             //             var registeredEvent = await registry.events.Registered({}, { fromBlock: registryCreationBlock, toBlock: 'latest' });
             var registeredEvent = registry.events.Registered({}, {fromBlock: registryCreationBlock} );
             var i = 0;
-            // registeredEvent.watch(function (error, result) {
-            //     // console.log(i++ + ": " + JSON.stringify(result));
-            //     console.log(i++ + ": " + result.args.signature + " => " + result.args.method);
-            // });
-            debugger;
             registeredEvent.on("data", function(event) {
+                i++;
                 let hash = event.returnValues.signature.slice(0, 10);
                 let method = event.returnValues.method;
-                console.log(`${hash}, method: "${method}"`); // same results as the optional callback above
+                console.log(`${i}, hash: ${hash}, method: "${method}"`);
             })
         }
     })
