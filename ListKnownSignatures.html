@@ -17,8 +17,8 @@
             var totalSignatures = await registry.methods.totalSignatures().call();
 
             console.log("totalSignatures: " + totalSignatures);
-
-            var registeredEvent = registry.events.Registered({}, fromBlock: registryCreationBlock );
+            //             var registeredEvent = await registry.events.Registered({}, { fromBlock: registryCreationBlock, toBlock: 'latest' });
+            var registeredEvent = registry.events.Registered({}, {fromBlock: registryCreationBlock} );
             var i = 0;
             // registeredEvent.watch(function (error, result) {
             //     // console.log(i++ + ": " + JSON.stringify(result));
