@@ -5,7 +5,7 @@
     // needs to run off a webserver (localhost etc), not as a file url
     window.addEventListener('load', async function (event) {
         if (typeof web3 !== 'undefined') {
-            debugger;
+
             console.log('Web3 Detected! ' + web3.currentProvider.constructor.name)
             window.web3 = new Web3(web3.currentProvider);
 
@@ -24,7 +24,8 @@
             //     // console.log(i++ + ": " + JSON.stringify(result));
             //     console.log(i++ + ": " + result.args.signature + " => " + result.args.method);
             // });
-            registteredEvent.on("data", function(event) {
+            debugger;
+            registeredEvent.on("data", function(event) {
                 console.log(event); // same results as the optional callback above
             })
         }
