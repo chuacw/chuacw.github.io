@@ -18,13 +18,15 @@
 
             console.log("totalSignatures: " + totalSignatures);
 
-            var registeredEvent = await registry.events.Registered({}, { fromBlock: registryCreationBlock, toBlock: 'latest' });
+            var registeredEvent = registry.events.Registered({}, fromBlock: registryCreationBlock );
             var i = 0;
-            registeredEvent.watch(function (error, result) {
-                // console.log(i++ + ": " + JSON.stringify(result));
-                console.log(i++ + ": " + result.args.signature + " => " + result.args.method);
-            });
-
+            // registeredEvent.watch(function (error, result) {
+            //     // console.log(i++ + ": " + JSON.stringify(result));
+            //     console.log(i++ + ": " + result.args.signature + " => " + result.args.method);
+            // });
+            registteredEvent.on("data", function(event) {
+                console.log(event); // same results as the optional callback above
+            })
         }
     })
 
