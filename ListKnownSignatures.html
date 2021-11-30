@@ -14,7 +14,7 @@
             var registryCreationBlock = 2468384;
             var registry = new web3.eth.Contract(registryABI, registryAddress);
 
-            var totalSignatures = registry.totalSignatures();
+            var totalSignatures = registry.methods.totalSignatures.call();
 
             console.log("totalSignatures: " + totalSignatures);
 
