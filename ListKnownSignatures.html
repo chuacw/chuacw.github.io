@@ -6,6 +6,8 @@
     window.addEventListener('load', async function (event) {
         if (typeof web3 !== 'undefined') {
 
+            const element = document.getElementById("output");
+            
             console.log('Web3 Detected! ' + web3.currentProvider.constructor.name)
             window.web3 = new Web3(web3.currentProvider);
 
@@ -17,21 +19,21 @@
             const totalSignatures = await registry.methods.totalSignatures().call();
 
             console.log("totalSignatures: " + totalSignatures);
-            //             var registeredEvent = await registry.events.Registered({}, { fromBlock: registryCreationBlock, toBlock: 'latest' });
             const registeredEvent = registry.events.Registered({}, {fromBlock: registryCreationBlock} );
             let i = 0;
             registeredEvent.on("data", function(event) {
                 i++;
-                let hash = event.returnValues.signature.slice(0, 10);
+                let signature = event.returnValues.signature.slice(0, 10);
                 let method = event.returnValues.method;
-                console.log(`${i}. hash: ${hash}, method: "${method}"`);
+                line = `${i}. signature: ${signature}, method: "${method}"<br/>`;
+                element.insertAdjacentHTML("beforeend", line);
             })
         }
     })
 
 </script>
-
 <body>
+<div id="output"></div>
 </body>
 
 </html>
