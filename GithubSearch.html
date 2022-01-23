@@ -9,7 +9,6 @@
         //   debugger;
           let _extensions = document.getElementById("extension");
           let form = document.forms["mySearchForm"];
-          form.removeChild(_extensions);
           let extensions = _extensions.value.split(/[ ,\t\n]/).filter(Boolean);
           let qext = "";
           for(let extension of extensions) {
