@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <link rel="stylesheet" href="./css/GithubSearch.css">
+    </head>
+    <script>
+        function fixFields() {
+        //   debugger;
+          let _extensions = document.getElementById("extension");
+          let form = document.forms["mySearchForm"];
+          form.removeChild(_extensions);
+          let extensions = _extensions.value.split(/[ ,\t\n]/).filter(Boolean);
+          let qext="";
+          for(let extension of extensions) {
+             qext+=(" extension:"+extension);
+          }
+          let search = document.getElementById("search");
+          search.value += " org:smartcontractkit";
+          search.value += qext;
+          console.log("extensions = ", qext);
+          console.log("search = ", search);
+          console.log("search value = ", search.value);
+          return true;  
+        }
+    </script>
+<body>
+    <div class="center">
+
+        <form id="mySearchForm" action="https://github.com/search?" onsubmit="return fixFields()" method="GET" >
+            <label for="search">Search:</label>
+            <input id="search" name="q" type="text" size="80"><br><br>
+            <label for="extension">Extensions:</label><br><br>
+            <textarea id="extension" name="extension" 
+              cols="40" rows="5" style="text-align: left">
+              go js jsx ts tsx htm html yml c cpp pas
+            </textarea><br><br>
+            <input type="text" id="type" name="type" hidden value="code">
+            <input type="submit" value="Submit">
+        </form>
+    </div> 
+</body>    
+</html>
