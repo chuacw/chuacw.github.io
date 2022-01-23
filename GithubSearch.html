@@ -18,6 +18,7 @@
           let search = document.getElementById("search");
           let query = document.getElementById("q");
           query.value = search.value + " org:smartcontractkit " + qext;
+          search.value = "";
           console.log("search value = ", query.value);
           return true;  
         }
@@ -25,8 +26,6 @@
         function doSubmit() {
           fixFields();  
           let form = document.forms["mySearchForm"];
-          let search = document.getElementById("search");
-          form.removeChild(search);
           form.submit();  
         }
 
