@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8"/>
+        <link rel="stylesheet" href="./css/GithubSearch.css">
+    </head>
+    <script>
+        function fixFields() {
+        //   debugger;
+          let _extensions = document.getElementById("extension");
+          let form = document.forms["mySearchForm"];
+          let extensions = _extensions.value.split(/[ ,\t\n]/).filter(Boolean);
+          let qext = "";
+          for(let extension of extensions) {
+             qext += (" extension:" + extension);
+          }
+          let search = document.getElementById("search");
+          let query = document.getElementById("q");
+          query.value = search.value + " org:smartcontractkit " + qext;
+          search.value = "";
+          console.log("search value = ", query.value);
+          return true;  
+        }
+
+        function doSubmit() {
+          fixFields();  
+          let form = document.forms["mySearchForm"];
+          form.submit();  
+        }
+
+        function clearSearch() {
+            let search = document.getElementById("search");
+            search.value = "";
+        }
+        
+        function trapEnterKey() {
+            // Get the input field
+            var input = document.getElementById("search");
+
+            // Execute a function when the user releases a key on the keyboard
+            input.addEventListener("keyup", function(event) {
+              // Number 13 is the "Enter" key on the keyboard
+              if (event.keyCode === 13) {
+                // Cancel the default action, if needed
+                event.preventDefault();
+                // Trigger the button element with a click
+                document.getElementById("submitBtn").click();
+              }
+            }); 
+        }
+    </script>
+<body onload="trapEnterKey()">
+    <div class="center">
+        Delphi Search v0.1 &copy 2022 Chee-Wee Chua.
+    </div>
+    <div class="center">
+
+        <form id="mySearchForm" action="https://github.com/search?" method="GET" >
+            <input id="q" name="q" type="text" hidden size="80"><br><br>
+            <label for="search">Search:</label>
+            <input id="search" name="search" type="text" size="80"><br><br>
+            <label for="extension">Extensions:</label><br><br>
+            <textarea id="extension" name="extension" 
+              cols="40" rows="5" style="text-align: left">
+dfm
+inc
+pas
+pp
+            </textarea><br><br>
+            <input type="text" id="type" name="type" hidden value="code">
+            <input id="submitBtn" type="button" value="Submit" onclick="doSubmit()">
+        </form>
+    </div> 
+</body>    
+</html>

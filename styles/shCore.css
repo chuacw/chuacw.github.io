@@ -24,6 +24,7 @@
 .syntaxhighlighter table thead,
 .syntaxhighlighter table caption,
 .syntaxhighlighter textarea {
+  border-radius: 0 0 0 0 !important;
   -moz-border-radius: 0 0 0 0 !important;
   -webkit-border-radius: 0 0 0 0 !important;
   background: none !important;
