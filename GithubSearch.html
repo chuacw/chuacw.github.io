@@ -11,12 +11,9 @@
           const form = document.forms["mySearchForm"];
           const extensions = _extensions.value.split(/[ ,\t\n]/).filter(Boolean);
           let qext = "";
-          for(const extension of extensions) {
-             qext += (" extension:" + extension);
-          }
           const search = document.getElementById("search");
           const query = document.getElementById("q");
-          query.value = search.value + " org:smartcontractkit " + qext;
+          query.value = search.value; // + " org:smartcontractkit " + qext;
           search.value = "";
           console.log("search value = ", query.value);
           return true;  
@@ -51,7 +48,7 @@
     </script>
 <body onload="trapEnterKey()">
     <div class="center">
-        Github Search v0.31 &copy 2022 Chee-Wee Chua (chuacw).
+        Github Search v0.32 &copy 2022 Chee-Wee Chua (chuacw).
     </div>
     <div class="center">
 
