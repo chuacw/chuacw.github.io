@@ -6,13 +6,12 @@
     </head>
     <script>
         function fixFields() {
-        //   debugger;
+          // debugger;
           // const _extensions = document.getElementById("extension");
           const form = document.forms["mySearchForm"];
           // const extensions = _extensions.value.split(/[ ,\t\n]/).filter(Boolean);
-          let qext = "";
-          const search = document.getElementById("search");
-          const query = document.getElementById("q");
+          // let qext = "";
+          // const query = document.getElementById("q");
           query.value = search.value; // + " org:smartcontractkit " + qext;
           search.value = "";
           console.log("search value = ", query.value);
@@ -20,19 +19,19 @@
         }
 
         function doSubmit() {
-          fixFields();  
+          // fixFields();  
           const form = document.forms["mySearchForm"];
           form.submit();  
         }
 
         function clearSearch() {
-            const search = document.getElementById("search");
+            const search = document.getElementById("q");
             search.value = "";
         }
         
         function trapEnterKey() {
             // Get the input field
-            const input = document.getElementById("search");
+            const input = document.getElementById("q");
 
             // Execute a function when the user releases a key on the keyboard
             input.addEventListener("keyup", function(event) {
@@ -48,14 +47,13 @@
     </script>
 <body onload="trapEnterKey()">
     <div class="center">
-        Github Search v0.33 &copy 2022 Chee-Wee Chua (chuacw).
+        Github Search v0.34 &copy 2022 Chee-Wee Chua (chuacw).
     </div>
     <div class="center">
 
         <form id="mySearchForm" action="https://github.com/search?" method="GET" >
-            <input id="q" name="q" type="text" hidden size="80"><br><br>
             <label for="search">Search:</label>
-            <input id="search" name="search" type="text" size="80"><br><br>
+            <input id="q" name="q" type="text" size="80"><br><br>
             <input type="text" id="l" name="l" hidden value="">
             <input type="text" id="type" name="type" hidden value="Code">
             <input id="submitBtn" type="button" value="Submit" onclick="doSubmit()">
